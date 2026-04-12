@@ -8,6 +8,9 @@ venv/
 *.jsonl
 .claude/scheduled_tasks.lock
 
+# Ephemeral smoke/ad-hoc experiment output (use --output-dir experiments/smoke/... for throwaway runs)
+experiments/smoke/
+
 # Creature runtime data
 creatures/*/memory/
 creatures/*/immune/

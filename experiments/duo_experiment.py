@@ -117,10 +117,16 @@ def main():
     parser.add_argument("--ticks", type=int, default=10)
     parser.add_argument("--train-seed", type=int, default=42)
     parser.add_argument("--test-seed", type=int, default=123)
+    parser.add_argument(
+        "--output-dir",
+        default=None,
+        help="Override output directory. Default: experiments/duo_results. "
+             "Specify a separate dir (e.g. experiments/smoke/...) to avoid overwriting committed reference data.",
+    )
     args = parser.parse_args()
 
     brain_specs = [b.strip() for b in args.brains.split(",")]
-    output_base = Path("experiments/duo_results")
+    output_base = Path(args.output_dir) if args.output_dir else Path("experiments/duo_results")
     output_base.mkdir(parents=True, exist_ok=True)
 
     creatures = []

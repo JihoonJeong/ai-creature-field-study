@@ -179,11 +179,17 @@ def main():
     parser.add_argument("--ticks", type=int, default=10)
     parser.add_argument("--seeds", default="42,99,7", help="comma-separated seeds for training")
     parser.add_argument("--test-seed", type=int, default=123, help="fixed seed for all test runs")
+    parser.add_argument(
+        "--output-dir",
+        default=None,
+        help="Override output directory. Default: experiments/experience_results/<provider>_<model>. "
+             "Specify a separate dir (e.g. experiments/smoke/...) to avoid overwriting committed reference data.",
+    )
     args = parser.parse_args()
 
     provider, model = args.brain.split(":", 1)
     seeds = [int(s) for s in args.seeds.split(",")]
-    output_base = f"experiments/experience_results/{provider}_{model.replace('.', '_')}"
+    output_base = args.output_dir or f"experiments/experience_results/{provider}_{model.replace('.', '_')}"
     Path(output_base).mkdir(parents=True, exist_ok=True)
 
     all_a = []
