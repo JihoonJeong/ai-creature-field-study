@@ -135,17 +135,40 @@ The methodology this paper defends is that sequence: every headline must be stat
 
 ## Variance & limitations (dedicated section — not a footnote)
 
-AI-creature behavior at n≤5 is variance-dominated on most metrics we tracked. Four of the original single-run observations failed replication at n=5, and the effect size of each was within its own sample-level stdev. Reporting means without stdev actively misleads: at n=5 we can recover plausible-looking headlines that disagree on direction between reruns of the same seeds. We argue this as a general caution for AI-creature field studies, not as a local quirk of our setup, and we report per-brain mean ± stdev for every metric in the Findings table rather than a single pooled number.
+AI-creature behavior at n≤5 is variance-dominated on most of the metrics we tracked. Four of the original single-run observations failed replication at n=5, and in each case the effect size was within the sample-level stdev. Reporting means without stdev actively misleads: at n=5 we can recover plausible-looking headlines that disagree on direction between reruns of the same seeds. We argue this as a general caution for AI-creature field studies, not as a local quirk of our setup, and we report per-brain mean ± stdev for every metric in the Findings table rather than a single pooled number.
+
+### Walk-back audit (stdev vs effect, experience_effect)
+
+To make the variance-dominated claim concrete, here are the full aggregates from the n=5 experience_effect pilot (Haiku, seeds [42, 99, 7, 13, 55], test_seed 123, 10 ticks). Group A is the experienced creature (trained in wilderness #1, then tested). Group B is the fresh creature (no training, straight to the same test seed):
+
+| metric | A: experienced | B: fresh | A − B | stdev bound |
+|---|---|---|---|---|
+| action_diversity | 2.40 ± 0.55 | 2.80 ± 0.45 | −0.40 | 0.50 |
+| emotion_diversity | 3.60 ± 1.14 | 3.20 ± 1.10 | +0.40 | 1.12 |
+| defend_rate | 4.0% ± 5.5% | 8.0% ± 4.5% | −4.0 pts | 5.0 pts |
+| explore_rate | 54% ± 13% | 52% ± 13% | +2 pts | 13 pts |
+| final_energy | 91.4 ± 9.7 | 82.0 ± 6.9 | +9.4 | 8.3 |
+| cooperation_rate | 0% ± 0% | 0% ± 0% | 0 | 0 |
+
+For every non-zero metric, |mean(A) − mean(B)| is within the averaged stdev. Under this discipline, no directional claim about experience's effect is supported by n=5. The original n=3 result, which reported A's defend_rate as 13% and B's as 3%, was a within-variance shuffle read as a headline. Compare against the confirmed brain-role finding's n=10 ranges (Haiku speak+support 50–76%, Flash 19–33%), where the per-brain ranges do not overlap at all.
+
+This is the quantitative version of "four walk-backs and one confirmed claim." The discipline — present full variance, compare effect to stdev, retract headlines whose effect is within noise — is the paper's primary methodological commitment.
 
 ### Observed but not isolated
 
-Some patterns at n=10 are visible but cannot be attributed to a single mechanism within this experimental design. We list them so they are not lost, but do not claim them:
+Some patterns at n=10 are visible but cannot be attributed to a single mechanism within this experimental design. We list them so they are not lost, and do not claim them:
 
 - **Final-energy gap across pair types.** Same-brain Haiku pairs end with notably lower energy (48–50) than the mixed pair (63–69) or the same-brain Flash pair (66). Three mechanisms would each produce this signature — social actions are metabolically costly; explore actions generate energy via event interactions; or the wilderness event mix happens to penalize whichever pair has the least explore. The current setup cannot distinguish between them. Follow-up planned as a separate controlled study; not in scope for this paper.
 
+### Scope limitations
+
+- **Only two brains.** The attractor finding is claimed for Haiku and Flash. Whether the attractor-dynamics story generalizes — new brain fills a new attractor slot? brains cluster into a small set of attractor types? — is an open question a third brain would begin to answer. We deliberately did not commission a third brain during the paper-draft window, to avoid conflating "extend the finding" with "test the finding." Cross-brain replication is called out as follow-up, not speculation.
+- **Fixed event catalogue, fixed tick count.** All runs used the same Wilderness event catalogue (calm day, storm, obstacle, isolation, discovery, nearby creature, and a handful of others) with category weights tuned by hand. 10 ticks per run was a compute-vs-variance tradeoff. A larger catalogue or longer runs would shift both the attractor means and their stdevs; we are claiming brain-fixed *relative* positions of the attractors, not absolute rates.
+- **Shared test_seed.** All runs held test_seed = 123 to isolate the brain's response from environmental variation. This strengthens internal comparability but weakens external generality: a different test_seed would produce different absolute numbers and could in principle produce a different within-pair amplification magnitude. We expect the qualitative attractor structure to survive seed changes, but we have not measured this.
+
 ### Non-determinism caveat
 
-LLM responses are not seedable, so strict reproduction of a specific tick sequence is impossible. We compensate by seeding the *environment* (so creatures face identical event streams) and reporting aggregate statistics across seed sets. Readers re-running the paper's commands will see values within reported stdev bands, not exact matches.
+LLM responses are not seedable, so strict tick-level reproduction is impossible. We compensate by seeding the *environment* (deterministic event streams) and reporting aggregate statistics across seed sets. Readers re-running the paper's commands will see values within the reported stdev bands, not bit-exact matches. The one dimension we *can* guarantee is that the same seed produces the same event sequence every time — which is what the Wilderness RNG isolation fix (see Methodology, Field environment footnote) earns.
 
 ## Reproducibility appendix
 
@@ -157,7 +180,7 @@ python experiments/experience_effect_experiment.py --brain claude_cli:haiku --ti
 python experiments/duo_experiment.py --brains claude_cli:haiku,gemini_cli:gemini-2.5-flash --ticks 10 --train-seeds 42,99,7,13,55 --test-seed 123 --output-dir experiments/smoke/my_duo
 ```
 
-Non-determinism caveat: LLM responses are not seedable, so re-runs will differ from the pilot aggregates. We report pilot means ± stdev; readers' re-runs should fall within that band.
+See the Variance & limitations section above for the non-determinism caveat and the reasoning behind reporting mean ± stdev rather than single-run numbers.
 
 ## Open threads
 
