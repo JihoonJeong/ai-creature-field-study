@@ -29,7 +29,9 @@ A *habitat* is a local folder containing the creature's config (`ludex.json`), i
 
 ### Field environment
 
-A *field* is a deterministic event stream that a creature (or a pair) lives through for a fixed number of ticks. This paper uses the `Wilderness` field: each tick presents an event sampled from a fixed catalogue (calm day, storm, obstacle, isolation, discovery, nearby creature, etc.), and each creature chooses one action from a closed set (rest, explore, speak, trade, support, defend). Events are drawn using a `random.Random(seed)` instance, so a given `(seed, tick_count)` produces the same event sequence on every invocation.
+A *field* is a deterministic event stream that a creature (or a pair) lives through for a fixed number of ticks. This paper uses the `Wilderness` field: each tick presents an event sampled from a fixed catalogue (calm day, storm, obstacle, isolation, discovery, nearby creature, etc.), and each creature chooses one action from a closed set (rest, explore, speak, trade, support, defend). Events are drawn from a Wilderness-local `random.Random(seed)` instance, so a given `(seed, tick_count)` produces the same event sequence on every invocation, independent of any other code in the process.
+
+This last condition is non-trivial: the creature's resilience layer uses the global `random` module for retry jitter, and an earlier version of Wilderness seeded the global RNG. That meant an unlucky run with more LLM retries would advance global state and get a different event sequence. We moved event sampling to an instance-local RNG so the environment is genuinely isolated from its tenants' noise. Reproducibility at this level is what lets us report mean ± stdev and have it mean what we say it does.
 
 This event-level determinism is what makes behavioral comparison meaningful. When we compare experienced-vs-fresh or Haiku-vs-Flash, we know the creatures faced the exact same situations. Any difference comes from the creature, not the environment.
 
@@ -42,7 +44,7 @@ Two experiments are defined:
 - **Experience effect** (`experiments/experience_effect_experiment.py`). Two groups. Group A: train in wilderness #1 → reflect (write SELF.md, store memories) → test in wilderness #2. Group B: skip training → test in wilderness #2 with a fresh creature. Both groups face the same wilderness #2 seed. Any behavioral delta is attributable to lived experience.
 - **Duo** (`experiments/duo_experiment.py`). Two creatures train separately in wilderness #1 (each with its own train seed), then meet in a shared wilderness #2. Actions now include social verbs (speak, support, trade). Any behavioral pattern is attributable to the interaction.
 
-Both scripts accept a comma-separated list of seeds so that an experiment *is* a set of runs, not a single run. The aggregator reports mean ± stdev across seeds, per condition and per brain. Summary JSONs include raw per-run metrics so readers can recompute aggregates.
+Both scripts accept a comma-separated list of seeds so that an experiment *is* a set of runs, not a single run. The aggregator reports mean ± stdev across seeds, per condition and per brain. Summary JSONs include raw per-run metrics so readers can recompute aggregates. The n=5 pilot set used seeds [42, 99, 7, 13, 55] and the n=10 confirmation set added [1, 23, 77, 100, 200]; test_seed was held at 123 in all runs to hold the shared wilderness constant.
 
 ### Brain-agnostic CLI integration
 
@@ -50,7 +52,12 @@ Each brain is an adapter that shells out to a local CLI: `claude` for Anthropic 
 
 ### Reproducibility harness
 
-The public repo is a standalone checkout: experiments import only from its own `ludex/` subset, not from a sibling Ludex master repo. To prevent accidental contamination between the two during concurrent work (a failure mode we hit and had to fix), experiment scripts pin their cwd to the repo root at entry (`os.chdir(_REPO_ROOT)`) and accept an explicit `--output-dir` flag that defaults to the reference path but can be redirected for throwaway runs. Reference data lives under `experiments/<name>_results/` and is committed; pilot and re-reproduction data lives under `experiments/smoke/*` and is gitignored.
+The public repo is a standalone checkout: experiments import only from its own `ludex/` subset, not from a sibling Ludex master repo. Two concrete guards earn the reproducibility claim rather than assume it:
+
+1. **Cwd pinning.** Experiment scripts call `os.chdir(_REPO_ROOT)` at entry. An earlier version relied on the invoker's cwd; during concurrent work we silently wrote output into the Ludex master repo when a shell had drifted there. We fixed the class of failure by removing the degree of freedom.
+2. **Environment RNG isolation.** As described above, Wilderness owns its own `random.Random` so retry jitter in the resilience layer cannot alter event sampling.
+
+Reference data lives under `experiments/<name>_results/` and is committed; pilot and re-reproduction data lives under `experiments/smoke/*` and is gitignored. An `--output-dir` flag on every experiment script lets a reader rerun without overwriting the committed reference set.
 
 A session report viewer renders per-run wilderness JSONs into human-readable markdown for qualitative inspection alongside the quantitative summary.
 
@@ -63,22 +70,22 @@ Early in this study we took four behavioral observations at face value based on 
 3. *Emotion flips negative → positive in duos.*
 4. *(From a parallel ToM-self-evaluation study in the Ludex track) Haiku is permissive, Flash is strict.*
 
-When we re-ran each claim under the same seeds at n=5 or n=10 with variance reporting, all four collapsed:
+When we re-ran each claim under the same seeds at n=5, all four collapsed:
 
-- #1's defend-rate direction flipped (ref A–B = +10 pts → pilot A–B = −4 pts).
-- #2 held for Haiku (2 ± 4.5%) but not for Flash (12 ± 8%); the average was misleading.
-- #3's signature emotion (`loving`) did not appear in any of 5 duo re-runs.
-- #4's asymmetry collapsed into a weak trend not usable as a headline (measured independently by the Ludex track).
+- #1 (experience → caution): defend-rate direction flipped. Reference (n=3) had Group A defend at 13 ± 6% and Group B at 3 ± 6%. The n=5 pilot on the same three seeds plus two more had Group A at 4 ± 6% and Group B at 8 ± 5%. The stdev equals the effect.
+- #2 (social presence → no defense): held for Haiku (2 ± 5%) but not for Flash (12 ± 8%) in the Pair A n=5 pilot. The pooled average was misleading; per-brain behavior is the correct granularity.
+- #3 (emotion → hopeful/loving): the signature emotion `loving` did not appear in any of the 5 duo re-runs with the original seed. It returned at n=10 but only in the same-brain Haiku pair, which is a different condition.
+- #4 (Haiku permissive / Flash strict): run independently by the Ludex track at n=10 and collapsed to a weak trend (Haiku slightly stricter, neither pole as originally described).
 
-Every claim's effect size was within its own sample-level stdev. They were real patterns in the one or two runs that produced them, and they were also consistent with noise.
+Every claim's effect size was within its own sample-level stdev. These were real patterns in the one or two runs that produced them, and they were also consistent with noise.
 
-A fifth claim — *brain-specific role differentiation in duos* — was introduced during the re-analysis of #2. It was then subjected to three progressively stricter tests: n=5 on the original heterogeneous pair (Haiku+Flash), then a same-brain pair in each direction (Haiku+Haiku as a falsifier against pair-dynamics explanations, Flash+Flash as a symmetric falsifier), and — pending — n=10 on all three pair configurations. It has passed each stage.
+A fifth claim — *brain-specific role differentiation in duos* — surfaced during the re-analysis of #2. Rather than accept it, we subjected it to three progressively stricter tests: n=5 on the original heterogeneous pair (Haiku+Flash), then a same-brain pair in each direction (Haiku+Haiku as a falsifier against the pair-dynamics explanation that "someone has to fill the explore role," Flash+Flash as a symmetric check), and finally n=10 on all three pair configurations. It passed each stage. The per-brain behavioral ranges remained non-overlapping on speak+support, explore, and defend at n=10, and the same-brain pairs deepened each brain's attractor instead of redistributing.
 
-The methodology this paper defends is that sequence: every headline must be stated with variance, every behavioral claim must pass at least one *symmetric* falsifier (same-brain pair for a between-brain claim), and every single-run observation should be treated as a hypothesis, not a result. Our contribution is a replicable field-study pipeline where these checks are cheap enough to run.
+The methodology this paper defends is that sequence: every headline must be stated with variance, every behavioral claim must pass at least one *symmetric* falsifier (a same-brain pair for a between-brain claim; a no-treatment control for an experience claim), and every single-run observation should be treated as a hypothesis, not a result. Our contribution is a replicable field-study pipeline where these checks are cheap enough to run — no paid API, no specialized hardware, and reference data committed alongside the code.
 
 ## Findings (exploratory, with variance)
 
-### Reported with confidence (n=5 stable)
+### Reported with confidence (n=10, stable)
 
 - **Attractor dynamics: brain-fixed attractors and within-pair amplification (n=10 × 3 pairs, symmetric).**
 
@@ -111,7 +118,7 @@ The methodology this paper defends is that sequence: every headline must be stat
     - Flash occupies its attractor *more loosely* than Haiku occupies its own. The width is consistent with or without a Haiku partner, so this is a brain-level property, not an interaction effect.
   - *As of 2026-04-13, this is the only behavioral finding that survived replication across both research tracks. A separate ToM "brain-stricture" hypothesis explored in the Ludex track failed to replicate at n=10 — the v1 asymmetry collapsed into a weak trend. The methodology's replication discipline is the meta-finding; brain-fixed attractor dynamics — attractor separation, symmetric falsification, within-pair amplification, and brain-dependent variance width — is the behavioral finding that passed it.*
 
-### Reported as variance observations (n=5 direction-unstable)
+### Reported as variance observations (n=5 direction-unstable, downgraded)
 
 - **"Experience makes creatures cautious/less-defensive"** (original headline, downgraded).
   - Reference (n=3, seeds 42/99/7): A defend 13.3% ± 5.8%, B 3.3% ± 5.8%.
