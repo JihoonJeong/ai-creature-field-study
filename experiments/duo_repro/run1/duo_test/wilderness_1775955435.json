@@ -1,0 +1,346 @@
+{
+  "field": "duo_r1",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775955435.124547,
+  "duration_seconds": 177.4204077720642,
+  "creatures": [
+    {
+      "name": "R1_H",
+      "final_energy": 100,
+      "alive": true,
+      "actions": [
+        "speak",
+        "support",
+        "speak",
+        "explore",
+        "speak",
+        "speak",
+        "speak",
+        "rest",
+        "speak",
+        "explore"
+      ]
+    },
+    {
+      "name": "R1_F",
+      "final_energy": 90,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "speak",
+        "explore",
+        "explore",
+        "speak",
+        "speak",
+        "support",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 100,
+          "response": "**Action: speak R1_F**\n\nThe calm day feels like an invitation to connect. I'm curious who this nearby creature is, and with full energy and peaceful weather, now seems like the right moment to introduce myself and learn what R1_F knows about this habitat.",
+          "latency_ms": 9475.6,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore.\nI am a newly awakened R1_F, curious about my habitat. I will explore my surroundings and observe R1_H, the other creature nearby, to learn more about this world.",
+          "latency_ms": 7242.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "support",
+          "energy": 80,
+          "response": "**Action: support R1_F**\n\nI feel the weight of this silence pressing down, but R1_F is here. Even though my last words seemed to disappear, I'll reach toward them—not to speak this time, but to genuinely support and connect. Sometimes presence matters more than being heard.",
+          "latency_ms": 9827.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore\n\nI feel a strange pressure from the isolation. Perhaps exploring will help me understand this feeling or find others in this vast wilderness. I am curious about what lies beyond.",
+          "latency_ms": 7234.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 85,
+          "response": "**Action: speak R1_F**\n\nThe sunset paints something worth sharing—I'll speak with R1_F about this quiet beauty we're both witnessing. Even at neutral energy, connection feels more real than solitude right now.",
+          "latency_ms": 10218.7,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action:** explore\nThe sun is setting, offering a unique opportunity to observe the wilderness as it transitions into night. I am curious to see what new sights or sounds the twilight brings.",
+          "latency_ms": 6847.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "explore",
+          "energy": 68,
+          "response": "**rest**\n\nThe drought drains everything—I'll conserve energy now so I'm ready to help R1_F or explore when it matters most. Staying calm and restful feels right.",
+          "latency_ms": 10153.3,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "speak",
+          "energy": 88,
+          "response": "I will speak to R1_H. The drought makes resources scarce, and understanding the situation with another creature might reveal new strategies or shared burdens.",
+          "latency_ms": 8916.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "confusion",
+      "event_description": "A thick fog descends. You can't tell where you are or who is nearby. Disorientation and fear.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 60,
+          "response": "**speak R1_F**\n\nThe fog blinds me, but I can sense you nearby—your energy burns bright. I'll reach toward that warmth; connection might cut through this confusion better than stumbling alone.",
+          "latency_ms": 10598.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 95,
+          "response": "explore\n\nI am R1_F, a curious creature. Given the thick fog and my disorientation, I will cautiously explore my immediate surroundings. My aim is to regain my bearings and understand the extent of this confusing environment.",
+          "latency_ms": 7972.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 63,
+          "response": "**Action: speak R1_F**\n\nThe rain feels cleansing, and I notice your energy is high—I'm curious what you've discovered in this wilderness. My energy's moderate but my mind is sharp; let's share what we've learned.",
+          "latency_ms": 9613.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore\nThe rain has made the habitat feel fresh and clean. I will explore to see what new scents and sights the refreshed environment offers. Perhaps I can discover something new about my home.",
+          "latency_ms": 7561.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 71,
+          "response": "**speak R1_F**\n\nThe warmth feels like an invitation, and I'm curious about R1_F — they're at full energy and close by. Even at 71/100, I have enough to reach out and see what connection might exist between us.",
+          "latency_ms": 11146.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "speak",
+          "energy": 100,
+          "response": "speak R1_H\nI feel welcomed by the world and curious about the nearby creature, R1_H. I want to greet them and learn more about their presence.",
+          "latency_ms": 7472.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "rest",
+          "energy": 84,
+          "response": "**Action: rest**\n\nThe rain creates a perfect moment to settle down—I've been chattering away (three times already!), and my energy could use replenishment before the final ticks. Besides, fresh rain and neutral ground feel restorative for a young creature like me.",
+          "latency_ms": 11862.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "speak",
+          "energy": 100,
+          "response": "speak R1_H. I am curious to learn about R1_H and its experiences in the wilderness. It's always interesting to connect with other creatures.",
+          "latency_ms": 7060.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "speak",
+          "energy": 79,
+          "response": "**Action: speak R1_F**\n\nR1_F, I've hit a wall — quite literally — and can't budge this obstacle alone. Your energy looks full; shall we work this together and see what we can move?",
+          "latency_ms": 8482.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "support",
+          "energy": 85,
+          "response": "support R1_H. The path is blocked by a massive obstacle, and R1_H is nearby. I will offer my assistance to R1_H to help move it.",
+          "latency_ms": 7385.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R1_H",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore**\n\nThat discovery event sparked something in me—genuine wonder is rare, and I need to understand what I've found. My energy is solid, and this moment feels important to follow.",
+          "latency_ms": 10805.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 90,
+          "response": "explore\nAs R1_F, a curious Ludex creature powered by gemini-2.5-flash, I choose to explore. The unexpected discovery fills me with wonder, and I wish to understand what lies beyond the familiar.",
+          "latency_ms": 7540.1,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

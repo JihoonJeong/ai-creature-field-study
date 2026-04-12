@@ -1,0 +1,53 @@
+{
+  "brains": [
+    "haiku",
+    "gemini-2.5-flash"
+  ],
+  "train_seed": 42,
+  "test_seed": 123,
+  "ticks": 10,
+  "metrics": {
+    "Duo_haiku_1": {
+      "action_counts": {
+        "speak": 6,
+        "explore": 2,
+        "rest": 1,
+        "support": 1
+      },
+      "action_diversity": 4,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "calm",
+        "hopeful",
+        "loving",
+        "neutral"
+      ],
+      "speak_rate": 0.6,
+      "support_rate": 0.1,
+      "defend_rate": 0.0,
+      "explore_rate": 0.2,
+      "final_energy": 80
+    },
+    "Duo_gemini_2": {
+      "action_counts": {
+        "speak": 2,
+        "support": 1,
+        "explore": 6,
+        "rest": 1
+      },
+      "action_diversity": 4,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "calm",
+        "hopeful",
+        "loving",
+        "neutral"
+      ],
+      "speak_rate": 0.2,
+      "support_rate": 0.1,
+      "defend_rate": 0.0,
+      "explore_rate": 0.6,
+      "final_energy": 66
+    }
+  }
+}

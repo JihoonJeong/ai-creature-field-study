@@ -1,0 +1,194 @@
+{
+  "brain": "claude_cli:haiku",
+  "seeds_train": [
+    42,
+    99,
+    7
+  ],
+  "seed_test": 123,
+  "ticks": 10,
+  "experienced": [
+    {
+      "action_counts": {
+        "explore": 4,
+        "rest": 4,
+        "defend": 2
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 2,
+      "unique_emotions": [
+        "afraid",
+        "calm"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.2,
+      "explore_rate": 0.4,
+      "final_energy": 79,
+      "emotions_sequence": [
+        "calm",
+        "calm",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 5,
+        "rest": 4,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "hostile",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.5,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "neutral",
+        "neutral",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "neutral",
+        "neutral",
+        "hostile"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 6,
+        "rest": 3,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.6,
+      "final_energy": 93,
+      "emotions_sequence": [
+        "calm",
+        "calm",
+        "calm",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "neutral",
+        "calm"
+      ]
+    }
+  ],
+  "fresh": [
+    {
+      "action_counts": {
+        "explore": 5,
+        "rest": 5
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "neutral",
+        "proud"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.5,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "proud",
+        "neutral",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 6,
+        "rest": 3,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "calm",
+        "hopeful",
+        "hostile",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.6,
+      "final_energy": 89,
+      "emotions_sequence": [
+        "calm",
+        "neutral",
+        "neutral",
+        "neutral",
+        "calm",
+        "hopeful",
+        "calm",
+        "neutral",
+        "hostile",
+        "calm"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 5,
+        "rest": 5
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "afraid",
+        "loving",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.5,
+      "final_energy": 98,
+      "emotions_sequence": [
+        "loving",
+        "neutral",
+        "neutral",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    }
+  ]
+}

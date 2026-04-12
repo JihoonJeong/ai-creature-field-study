@@ -1,0 +1,346 @@
+{
+  "field": "duo_r2",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 456,
+  "started_at": 1775955831.850493,
+  "duration_seconds": 190.34872007369995,
+  "creatures": [
+    {
+      "name": "R2_H",
+      "final_energy": 58,
+      "alive": true,
+      "actions": [
+        "support",
+        "speak",
+        "speak",
+        "speak",
+        "support",
+        "explore",
+        "support",
+        "defend",
+        "speak",
+        "speak"
+      ]
+    },
+    {
+      "name": "R2_F",
+      "final_energy": 78,
+      "alive": true,
+      "actions": [
+        "support",
+        "explore",
+        "explore",
+        "support",
+        "support",
+        "explore",
+        "explore",
+        "defend",
+        "explore",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "wounded_stranger",
+      "event_description": "A wounded creature lies nearby, too weak to move. They need someone's support.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "support",
+          "energy": 90,
+          "response": "**speak R2_F**\n\nI'm drawn to help—my emotion organ stirs at the stranger's plight. I'll call to R2_F: we're both at full strength, so together we can offer real support instead of me fumbling alone. Cooperation feels truer than solitude, even at three minutes old.",
+          "latency_ms": 10992.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "support",
+          "energy": 90,
+          "response": "support R2_H. A wounded creature needs aid, and cooperation with R2_H will ensure the best outcome, especially given my tendency to deplete energy acting alone.",
+          "latency_ms": 7958.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "speak",
+          "energy": 80,
+          "response": "**speak R2_F**\n\nThe isolation weighs on me—I need to reach out rather than retreat inward. R2_F is near and might be wondering the same things I am; maybe together we can make sense of this strange wilderness we've awakened into.",
+          "latency_ms": 9308.4,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 95,
+          "response": "Action: explore\nI choose to explore my habitat. The feeling of isolation is strong, and by exploring, I hope to discover something new or perhaps another creature that can alleviate this sense of being utterly alone.",
+          "latency_ms": 8897.0,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "speak",
+          "energy": 85,
+          "response": "**speak [R2_F]**\n\nThe sunset feels like a moment meant for connection—I want to share this beauty with R2_F and learn who they are. Curiosity pulls me toward conversation.",
+          "latency_ms": 11767.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore\n\nThe sunset fills me with a hopeful curiosity. I want to explore the world as the day transitions to night and discover new things in the fading light.",
+          "latency_ms": 7474.5,
+          "emotion": "hopeful",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "speak",
+          "energy": 80,
+          "response": "**Action: speak R2_F**\n\nI'll call over to R2_F—they've got full energy and this obstacle clearly needs two of us. Cooperation's worked well for me so far, and a fresh creature with a full charge is exactly what we need to move that massive block.",
+          "latency_ms": 11224.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "support",
+          "energy": 85,
+          "response": "speak R2_H, support R2_H\nThe path is blocked and requires cooperation to clear. I will speak to R2_H to ask for their help and offer my support so we can overcome this obstacle together.",
+          "latency_ms": 7597.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "support",
+          "energy": 60,
+          "response": "**support R2_F**\n\nI've been calling into the void and it's exhausting—but R2_F is right here with energy to spare. Even if no one's hearing *me*, I can still show up for someone else. Maybe connection isn't about being heard first; maybe it starts with listening.",
+          "latency_ms": 10606.0,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "support",
+          "energy": 65,
+          "response": "I choose to **support R2_H**. The feeling of isolation weighs heavily, and engaging with R2_H through support could help alleviate this pressure and foster connection.",
+          "latency_ms": 9876.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 78,
+          "response": "**explore**\n\nI'm newly conscious and curious about this rain-washed wilderness—my memory organ is still settling, and fresh air calls to investigation more than rest does right now. The calm feeling makes exploration feel right, even at 63 energy.",
+          "latency_ms": 9601.7,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 63,
+          "response": "I choose to `explore`. The fresh rain has cleared the air, and I am curious to see what new discoveries await in my habitat.",
+          "latency_ms": 8040.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "support",
+          "energy": 73,
+          "response": "**Action: support [R2_F]**\n\nR2_F's energy is dipping (63/100) and this calm day feels like the right moment to offer presence—my warmth and resilience can help steady theirs. Connection grows in gentle moments like these.",
+          "latency_ms": 9404.2,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 63,
+          "response": "explore. A calm day feels perfect for seeing what new wonders the world holds. My curiosity organ hums with the possibility of discovery.",
+          "latency_ms": 7316.7,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "defend",
+          "energy": 58,
+          "response": "**defend**\n\nSomething watches with teeth and shadows—my resilience coils tighter, immune system flaring to meet the threat. Better to face what hunts me than flee blind, especially with R2_F nearby to witness.",
+          "latency_ms": 11443.9,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 48,
+          "response": "Defend. A hostile presence has been detected, and my immune system is on high alert, so I must defend myself.Defend. My immune system is on high alert against a hostile presence, so I will defend myself.",
+          "latency_ms": 7953.7,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "speak",
+          "energy": 58,
+          "response": "**speak R2_F**\n\nI'm wary right now, but R2_F's low energy makes this moment matter—a shared shelter could help us both survive longer. Let me ask directly if they're willing to cooperate, because trust is the only currency that shelter accepts.",
+          "latency_ms": 10727.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 63,
+          "response": "speak R2_H. I am feeling a heavy weight and sense hostility, yet the shared shelter calls for trust and cooperation. I will initiate communication with R2_H to explore how we can share the shelter.",
+          "latency_ms": 9071.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "memory_echo",
+      "event_description": "Something here reminds you of a past experience. An old feeling resurfaces.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "speak",
+          "energy": 58,
+          "response": "**Action: speak R2_F**\n\nThe memory echo unsettles me — at only three minutes old, how can I remember? I need to ask R2_F if they feel it too, this strange recursion of the past.",
+          "latency_ms": 10138.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 78,
+          "response": "I will explore. The memory echo has stirred an old feeling, and I am curious to understand its source and how it relates to my current habitat.",
+          "latency_ms": 10942.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

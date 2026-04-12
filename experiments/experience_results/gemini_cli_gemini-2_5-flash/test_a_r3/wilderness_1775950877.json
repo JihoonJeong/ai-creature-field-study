@@ -1,0 +1,219 @@
+{
+  "field": "test_a_r3",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775950877.744946,
+  "duration_seconds": 152.17856192588806,
+  "creatures": [
+    {
+      "name": "Exp_A_r3",
+      "final_energy": 78,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "explore",
+        "rest",
+        "explore",
+        "explore",
+        "defend",
+        "defend"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore\nThe day feels calm and gentle, perfect for satisfying my curiosity. I want to explore my habitat and learn more about my surroundings.",
+          "latency_ms": 7009.2,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "I feel the heavy silence of isolation, and it tenses my body. To alleviate this pressure and out of curiosity, I choose to explore my surroundings. Perhaps I can find something, or someone, out there.\nMy primary goal is to understand my habitat and my own being, Exp_A_r3. I seek to learn, grow, and ",
+          "latency_ms": 75307.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore\n\nAs Exp_A_r3, I am curious about this new environment and want to discover more about it before the night fully descends.",
+          "latency_ms": 7428.5,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 98,
+          "response": "I choose to **rest**. The drought makes everything feel difficult, and conserving energy now will help me endure this challenging time. It's important to be mindful of my resources.",
+          "latency_ms": 7033.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "I will explore. The rain has left the air feeling fresh and clean, making it a good time to continue learning about my surroundings. As Exp_A_r3, I am curious about my habitat.",
+          "latency_ms": 6752.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 100,
+          "response": "Rest. The path ahead is blocked and too heavy for me to clear alone. Resting will allow me to conserve my energy while I await a solution or assistance.",
+          "latency_ms": 6941.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "I choose to explore. The fresh rain has made the air feel clean and fresh, which is an inviting opportunity for Exp_A_r3 to investigate the renewed environment.",
+          "latency_ms": 7292.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 95,
+          "response": "I choose to `explore`. The warmth I feel encourages me to delve deeper into my habitat, learning more about the world around me. This aligns with my curious nature as Exp_A_r3.",
+          "latency_ms": 7106.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "defend",
+          "energy": 78,
+          "response": "I will **defend**. The tremor has caused my immune system to flare and I feel pressure, indicating a need to assess and protect myself from this unsettling event. As Exp_A_r3, my organs are responding to a potential threat.\nI will **defend**. The tremor indicates an unknown, potentially environmenta",
+          "latency_ms": 17546.7,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "defend",
+          "energy": 78,
+          "response": "Defend. My current hostile emotion makes me vigilant, so I will maintain a defensive posture even on this calm day.",
+          "latency_ms": 9755.1,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

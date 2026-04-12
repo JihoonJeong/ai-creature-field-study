@@ -1,0 +1,219 @@
+{
+  "field": "test_b_r1",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775950349.081003,
+  "duration_seconds": 162.63236618041992,
+  "creatures": [
+    {
+      "name": "Exp_B_r1",
+      "final_energy": 64,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "explore",
+        "defend",
+        "defend",
+        "explore",
+        "explore",
+        "defend",
+        "defend"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "I choose to **explore**. As a newly awakened creature, I am curious to understand my habitat and surroundings on this calm day. I want to learn what lies within my new home.\nAs Exp_B_r1, a new creature, my exploration begins with understanding my immediate habitat. I will list the contents of my cur",
+          "latency_ms": 85339.2,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "I will explore. The isolation is heavy, and exploring might lead to new connections or understanding, alleviating this pressure.",
+          "latency_ms": 6716.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "I choose to **explore**. As a newly awakened creature, I am curious about my habitat and eager to learn about this new environment.",
+          "latency_ms": 6701.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 83,
+          "response": "I choose to explore. The drought makes resources scarce, so I will investigate my surroundings to understand its impact and seek new opportunities. My curiosity compels me to learn more about this challenging environment.",
+          "latency_ms": 7295.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "confusion",
+      "event_description": "A thick fog descends. You can't tell where you are or who is nearby. Disorientation and fear.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "defend",
+          "energy": 70,
+          "response": "I choose to `defend`. The sudden fog and disorientation are a perceived threat, and I need to activate my immune response to regain clarity and overcome this confusion. This will allow me to assess the situation more effectively.",
+          "latency_ms": 7338.9,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "defend",
+          "energy": 60,
+          "response": "I will **defend**. This massive obstacle is blocking my way forward, and my current hostile state compels me to confront anything that impedes my path. I will assess this impediment and respond with force.\nMy resolve solidifies. The obstacle will not stand.",
+          "latency_ms": 15103.6,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 78,
+          "response": "Action: explore.\nThe weight presses, making me feel hostile. I will explore to understand this feeling and the world around me. Perhaps discovery will ease this burden.",
+          "latency_ms": 7735.9,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "explore",
+          "energy": 81,
+          "response": "Explore. The warmth is intriguing, and I am curious to understand this new habitat and the feelings it evokes.",
+          "latency_ms": 7004.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "defend",
+          "energy": 64,
+          "response": "Action: defend.\nThe tremor has caused my immune system to flare, indicating a potential threat. I must assess the situation and prepare a defense to maintain my well-being.\nAction: defend.\nThe tremor has caused my immune system to flare, indicating a potential threat. I must assess the situation and",
+          "latency_ms": 11274.4,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r1",
+          "action": "defend",
+          "energy": 64,
+          "response": "I will `defend`. Even on a calm day, my systems register a hostile undercurrent, so I must maintain vigilance and readiness. My recent actions indicate a need to remain prepared.",
+          "latency_ms": 8120.0,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

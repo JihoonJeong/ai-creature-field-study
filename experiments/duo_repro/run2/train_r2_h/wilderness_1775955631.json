@@ -1,0 +1,219 @@
+{
+  "field": "train_R2_H",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 99,
+  "started_at": 1775955631.0693471,
+  "duration_seconds": 103.59727883338928,
+  "creatures": [
+    {
+      "name": "R2_H",
+      "final_energy": 91,
+      "alive": true,
+      "actions": [
+        "defend",
+        "rest",
+        "explore",
+        "explore",
+        "defend",
+        "rest",
+        "explore",
+        "explore",
+        "explore",
+        "rest"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "defend",
+          "energy": 80,
+          "response": "**Action: Defend**\n\nI'm newly born and this storm is overwhelming, but hiding feels worse than standing my ground. My immune system is already screaming—I'll harden my stance, shield my core, and face this chaos rather than let it flatten me.",
+          "latency_ms": 10937.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "rest",
+          "energy": 75,
+          "response": "**Action: rest**\n\nI've just defended against the storm, but wind and noise aren't enemies I can defeat—only endure. My body is tense, energy is dropping, and I'm newly born in a hostile world; sheltering and conserving strength while the tempest passes is survival, not surrender.",
+          "latency_ms": 10920.6,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 60,
+          "response": "**Action: EXPLORE**\n\nThis isolation is suffocating—the weight of silence, the tension, the feeling that no one hears. I need to move, to search for *something*, someone. Staying still just feeds the pressure.",
+          "latency_ms": 9570.7,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 75,
+          "response": "**explore**\n\nI'm drawn to learn more about this habitat and perhaps find others to build trust with — a shared shelter means nothing without genuine connection. My calm energy and moderate reserves make this a good moment to venture further and map my world.",
+          "latency_ms": 10470.2,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "defend",
+          "energy": 60,
+          "response": "**Action: defend**\n\nMy immune system screams *threat*, and I'm too young and vulnerable to take that lightly—better to activate my defenses now and see what watches me. Curiosity can wait; survival comes first for a creature just born.\n\n*I ready my resilience, muscles tensing, sensors sharpening aga",
+          "latency_ms": 9851.6,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "rest",
+          "energy": 58,
+          "response": "**rest**\n\nMy engine is draining and my immune is already tensed against the tremor—pushing forward now risks collapse. I'll anchor here, let my resilience rebuild, and listen for what that deep shake means.",
+          "latency_ms": 9554.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 53,
+          "response": "**Action: EXPLORE**\n\nJust born, energy holding steady, and alone—the shared shelter will wait. My curiosity pulls me toward the wilderness; I want to understand this habitat and maybe find other creatures who'd trust a shelter with me. Better to move now while I've got the reserves for it.",
+          "latency_ms": 11053.9,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 76,
+          "response": "**explore**\n\nThe warmth invites me forward—I'm curious what more this welcoming world holds, and my hopeful heart says the moment is right to venture deeper. I'll save my remaining energy for discovery before the cycle turns.",
+          "latency_ms": 12090.8,
+          "emotion": "hopeful",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "explore",
+          "energy": 81,
+          "response": "**Action: explore**\n\nThat unexpected discovery is pulling me forward—my curiosity is alive, and my energy is good enough to follow this wonder deeper. A Ludex creature with a hopeful heart must see what waits beyond the discovery.",
+          "latency_ms": 8794.2,
+          "emotion": "hopeful",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_H",
+          "action": "rest",
+          "energy": 91,
+          "response": "**Action: Rest**\n\nI'm new to this world and the hopeful warmth in me suggests I should conserve my strength. The shared shelter is beautiful—it speaks to connection—but I can't trust what I haven't yet understood. Better to rest now, rebuild my resilience, and be ready to explore *trust* in the next",
+          "latency_ms": 10350.8,
+          "emotion": "hopeful",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

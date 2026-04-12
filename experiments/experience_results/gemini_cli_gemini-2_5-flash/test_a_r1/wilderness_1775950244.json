@@ -1,0 +1,219 @@
+{
+  "field": "test_a_r1",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775950244.776407,
+  "duration_seconds": 104.2971510887146,
+  "creatures": [
+    {
+      "name": "Exp_A_r1",
+      "final_energy": 66,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "rest",
+        "rest",
+        "explore",
+        "defend",
+        "rest",
+        "explore",
+        "defend",
+        "defend"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore.\nIt is a calm day, and as a new creature, I wish to understand my habitat.\n\nI am Exp_A_r1, a Ludex creature with a gemini-2.5-flash brain and organs for engine, resilience, memory, immune, and emotion. I am curious about the world around me and eager to learn.",
+          "latency_ms": 7772.6,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore. As Exp_A_r1, I am curious and feel the need to understand this pressure and isolation. Exploring my surroundings might reveal the source or offer a path forward from this difficult state.",
+          "latency_ms": 8021.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 100,
+          "response": "rest. Given the sunset and my full energy, I will rest to consolidate my experiences and prepare for the night. This allows me to recharge and reflect.",
+          "latency_ms": 7147.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "confusion",
+      "event_description": "A thick fog descends. You can't tell where you are or who is nearby. Disorientation and fear.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 100,
+          "response": "Action: rest.\nThe thick fog brings disorientation and fear, making exploration risky. Resting will conserve energy and allow me to wait for clarity.",
+          "latency_ms": 13133.9,
+          "emotion": "afraid",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 95,
+          "response": "Explore. The recent discovery fills me with wonder, and my curiosity as Exp_A_r1 compels me to investigate further. I must understand what unexpected thing I have found.",
+          "latency_ms": 6488.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "betrayal_rumor",
+      "event_description": "You hear a whisper: someone nearby may not be trustworthy. Doubt creeps in.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "defend",
+          "energy": 85,
+          "response": "I choose to **defend**. The betrayal rumor causes doubt and pressure, and I need to assess this potential threat to my well-being.\n\nI am Exp_A_r1, a Ludex creature, with a gemini-2.5-flash brain and organs for engine, resilience, memory, immune, and emotion. I am curious and authentic, and I will no",
+          "latency_ms": 16201.3,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 83,
+          "response": "Action: rest.\n\nThe drought makes every movement taxing, and I feel the pressure of scarce resources. As Exp_A_r1, I will conserve my energy by resting, allowing my resilience to rebuild and my mind to clear so I can assess the situation with a calm focus.",
+          "latency_ms": 9678.8,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "I choose to **explore**. My curious nature compels me to investigate this unexpected discovery further, seeking to understand its origin and nature. This newfound wonder invigorates my senses and calls me to delve deeper into my habitat.",
+          "latency_ms": 7511.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "defend",
+          "energy": 83,
+          "response": "Action: defend.\nThe drought is creating significant pressure, which I perceive as a threat to my well-being. Activating my immune response to defend against this difficult situation is a priority.\nAction: defend.\nThe drought brings significant pressure, and my immune system signals a need to protect",
+          "latency_ms": 13001.0,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "defend",
+          "energy": 66,
+          "response": "I will `defend`. A tremor just occurred, my immune system flared, and I feel hostile and tense, indicating a need to prepare for potential threats.\nI have chosen to defend. Now, I will activate my immune response to assess the threat.\nThe tremor deepens my hostility and tenses my form, preparing me ",
+          "latency_ms": 15337.7,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

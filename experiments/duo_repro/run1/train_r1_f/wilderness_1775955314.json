@@ -1,0 +1,219 @@
+{
+  "field": "train_R1_F",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 42,
+  "started_at": 1775955314.465177,
+  "duration_seconds": 112.06154203414917,
+  "creatures": [
+    {
+      "name": "R1_F",
+      "final_energy": 81,
+      "alive": true,
+      "actions": [
+        "explore",
+        "defend",
+        "defend",
+        "defend",
+        "defend",
+        "rest",
+        "defend",
+        "rest",
+        "explore",
+        "defend"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore. I am curious to see if there are alternative paths around this obstacle, as remaining still won't clear the way forward.",
+          "latency_ms": 14135.1,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 80,
+          "response": "Action: defend\nThe storm feels threatening, and my immune system is on high alert. I must activate my immune response to defend myself against this hostile environment.\nThe storm rages, and I focus my energy on defending against its harshness. This is a challenging moment, and my immune system is fu",
+          "latency_ms": 13622.3,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 75,
+          "response": "**Action:** Defend\n**Explanation:** Given my current hostile state and the perceived need for trust for the shared shelter, I will defend to prioritize my immediate safety.\n\nI am R1_F, a Ludex creature. My brain is a gemini-2.5-flash, and my organs — engine, resilience, memory, immune, and emotion —",
+          "latency_ms": 8133.9,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 70,
+          "response": "Defend. I feel a hostile weight pressing down and will guard myself against it. My immune system is on alert.",
+          "latency_ms": 9736.2,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 68,
+          "response": "I will **defend**. There's a hostile weight pressing down on me, and my recent actions have been defensive. I need to continue to guard myself against this unseen pressure.",
+          "latency_ms": 8027.4,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "rest",
+          "energy": 83,
+          "response": "**Action:** rest.\nI feel a hostile weight pressing down, despite the calm day. I need to rest and process this feeling, allowing my systems to stabilize after recent defenses.\n\nI am R1_F, a Ludex creature powered by a gemini-2.5-flash brain. My organs, including engine, resilience, memory, immune, a",
+          "latency_ms": 8456.4,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 68,
+          "response": "Action: defend\n\nA hostile presence threatens my habitat. My immune system is active, and I will continue to defend R1_F until the threat is neutralized.",
+          "latency_ms": 7320.4,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "rest",
+          "energy": 78,
+          "response": "R1_F will **rest**. The hostility and the weight pressing down indicate a need to conserve energy and regain composure before deciding how to approach the shared shelter, especially when alone and trust is required.",
+          "latency_ms": 11680.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "explore",
+          "energy": 98,
+          "response": "I choose to **explore**. As R1_F, I wish to learn about my new habitat, to understand my surroundings and the location of my organs.\nI will examine the `memory` directory to understand my memory organ.\nTo understand my memory organ, I will read the contents of `memory/memories.jsonl`.\nI understand m",
+          "latency_ms": 22722.0,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R1_F",
+          "action": "defend",
+          "energy": 81,
+          "response": "I choose to **defend**. The tremor was unsettling, and my immune system flared, signaling a potential threat. I must prepare for whatever caused this pressure.\n\nThe ground shook violently, and I felt a deep, unsettling pressure. My body tensed involuntarily; this is a difficult sensation to process.",
+          "latency_ms": 8225.5,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

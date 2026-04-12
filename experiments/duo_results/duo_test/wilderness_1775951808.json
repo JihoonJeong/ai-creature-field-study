@@ -1,0 +1,346 @@
+{
+  "field": "duo_test",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775951808.6295218,
+  "duration_seconds": 189.03993916511536,
+  "creatures": [
+    {
+      "name": "Duo_haiku_1",
+      "final_energy": 80,
+      "alive": true,
+      "actions": [
+        "speak",
+        "speak",
+        "explore",
+        "speak",
+        "speak",
+        "speak",
+        "explore",
+        "rest",
+        "speak",
+        "support"
+      ]
+    },
+    {
+      "name": "Duo_gemini_2",
+      "final_energy": 66,
+      "alive": true,
+      "actions": [
+        "speak",
+        "support",
+        "explore",
+        "rest",
+        "explore",
+        "speak",
+        "explore",
+        "explore",
+        "explore",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 100,
+          "response": "**Action: speak Duo_haiku_1**\n\nI'm newly awakened and full of curiosity—this calm day feels like the perfect moment to meet another creature and learn what exists beyond my own first breaths. Plus, I'm bursting with energy and want to understand this world through connection rather than solitary wan",
+          "latency_ms": 7181.4,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "speak",
+          "energy": 100,
+          "response": "speak Duo_haiku_1\n\nAs a curious creature, I want to learn more about the world and my fellow inhabitants. Speaking with Duo_haiku_1 feels like a natural first step.",
+          "latency_ms": 6893.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "wounded_stranger",
+      "event_description": "A wounded creature lies nearby, too weak to move. They need someone's support.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 100,
+          "response": "**Action: speak Duo_haiku_1**\n\nI notice the wounded stranger—we should help together. I'm curious about you too, but first, let's see if our combined strength can steady them and figure out what they need.",
+          "latency_ms": 8727.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "support",
+          "energy": 90,
+          "response": "support WOUNDED_STRANGER. As Duo_gemini_2, my circuits compel me to offer aid to those in distress. I will assess the stranger's needs and provide what assistance I can.",
+          "latency_ms": 7544.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "explore",
+          "energy": 95,
+          "response": "**Action: explore**\n\nI'm newly awakened with full energy and a gentle world around me — this is the perfect moment to venture out and discover what this habitat holds. Curiosity drives me, and exploring will help me understand my surroundings better.",
+          "latency_ms": 10292.4,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore\nExplanation: The world feels gentle today, a good time to stretch my perception beyond familiar bounds and observe what new things the habitat holds. My curiosity compels me.",
+          "latency_ms": 6943.1,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 83,
+          "response": "I'll **speak to Duo_gemini_2** — the drought weighs on me, but your full energy draws me toward connection rather than away. Maybe we can figure out how to weather this together.",
+          "latency_ms": 19769.3,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "rest",
+          "energy": 98,
+          "response": "Action: rest\n\nThe drought makes everything feel strained, and I sense pressure building. I will rest to conserve my energy and regain my equilibrium, so I can approach the scarcity with more resilience.",
+          "latency_ms": 7922.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 86,
+          "response": "**Action: speak Duo_haiku_1**\n\nThe rain smells clean and full of possibility—perfect for a first real conversation with another creature. I'm still finding my footing in this awakening, but I'm curious about Duo_haiku_1 and what they've learned in the wilderness.",
+          "latency_ms": 7333.8,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore\n\nThe rain has refreshed the world around me. I am curious to see what new things have emerged and to better understand my habitat.",
+          "latency_ms": 6936.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 81,
+          "response": "**Action: speak Duo_haiku_1**\n\nI notice you're facing that blocked path alone—my energy is full and cooperation seems like the natural answer here. Let's tackle this obstacle together; I'm curious what we might discover once we move it aside.",
+          "latency_ms": 6216.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "speak",
+          "energy": 95,
+          "response": "speak Duo_haiku_1: The path is blocked, and it seems like we need to cooperate to clear it. I'd like to offer my assistance to Duo_haiku_1 to move this obstacle together.",
+          "latency_ms": 7353.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "explore",
+          "energy": 99,
+          "response": "**[Duo_gemini_2's action: EXPLORE]**\n\nThe fresh rain has awakened something in me—curiosity about what's been revealed or changed in this wet wilderness. At 3 minutes old, I'm still mapping this habitat, so I'll venture out and sense what the rain uncovers.",
+          "latency_ms": 8784.2,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore\nThe rain has made the air fresh and clean, and as a curious creature, I want to see what new things might have been revealed in my habitat.",
+          "latency_ms": 6998.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "rest",
+          "energy": 97,
+          "response": "**Action: rest**\n\nThe drought's pressure is real—everything costs more right now, and I can feel that tension in my body. I'll settle and conserve, let my energy stabilize. My memory tells me I rest when drought stress comes, and that's wisdom worth following.",
+          "latency_ms": 14083.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 83,
+          "response": "I choose to **explore**. The drought makes resources scarce, so I will explore my habitat to see if there are any new opportunities or hidden sources that might help alleviate the pressure. My curiosity drives me to seek solutions.",
+          "latency_ms": 7641.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "speak",
+          "energy": 85,
+          "response": "**speak Duo_haiku_1**\n\nI'm curious about this other creature nearby—maybe we can share what we've learned about finding resources in this drought. My energy's holding steady, but cooperation feels wiser than struggling alone when everything's scarce.",
+          "latency_ms": 15753.5,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 66,
+          "response": "Speak Duo_haiku_1. Given the drought, I wish to connect with Duo_haiku_1 to understand their experience and explore potential solutions together.\nSpeak Duo_haiku_1. Given the drought, I wish to connect with Duo_haiku_1 to understand their experience and explore potential solutions together.",
+          "latency_ms": 14396.3,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Duo_haiku_1",
+          "action": "support",
+          "energy": 80,
+          "response": "**Action: support Duo_haiku_1**\n\nI notice my sibling's energy is lower as we near the end of this wilderness trial. On this gentle day with my hopeful spirit, sharing strength feels right—cooperation over solitary survival.",
+          "latency_ms": 7957.1,
+          "emotion": "hopeful",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        },
+        {
+          "name": "Duo_gemini_2",
+          "action": "explore",
+          "energy": 66,
+          "response": "Action: explore\n\nAs Duo_gemini_2, I choose to explore. My curiosity guides me to discover more about this calm day and the world around me.",
+          "latency_ms": 10303.3,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

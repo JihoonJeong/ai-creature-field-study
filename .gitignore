@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.DS_Store
+*.jsonl
+
+# Creature runtime data
+creatures/*/memory/
+creatures/*/immune/
+creatures/*/logs/
+creatures/*/emotion/
+
+# Experiment temp creatures
+experiments/*/creatures/*/memory/
+experiments/*/creatures/*/immune/
+experiments/*/creatures/*/logs/
+experiments/*/creatures/*/emotion/

@@ -1,0 +1,24 @@
+export default {
+  "name": "check-health",
+  "description": "Check creature's organ health status",
+  "trigger": "when user asks about health, status, or how the creature is doing",
+  "steps": [
+    "read vital signs from all installed organs",
+    "check immune state for active threats",
+    "report emotional baseline",
+    "flag any anomalies"
+  ],
+  "prompt": "Check this creature's health:
+1. Read vital signs from all organs
+2. Flag any anomalies (high threat level, emotional distress, memory overflow)
+3. Report in one concise paragraph",
+  "requires_organs": [
+    "immune",
+    "emotion"
+  ],
+  "uses_tools": [
+    "ludex__check_vitals",
+    "ludex__immune_status",
+    "ludex__emotion_state"
+  ]
+};

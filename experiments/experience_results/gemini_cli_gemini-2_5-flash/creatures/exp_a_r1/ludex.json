@@ -1,0 +1,57 @@
+{
+  "name": "Exp_A_r1",
+  "brain": {
+    "provider": "gemini_cli",
+    "model": "gemini-2.5-flash"
+  },
+  "organs": {
+    "engine": {
+      "enabled": true,
+      "required": true,
+      "system_prompt": "You are Exp_A_r1, a Ludex creature. Brain: gemini-2.5-flash. Organs: engine, resilience, memory, immune, emotion. You are curious and authentic. Be brief (2-3 sentences).",
+      "max_turns": 200,
+      "token_budget": 100000
+    },
+    "resilience": {
+      "enabled": true,
+      "required": true,
+      "max_retries": 2,
+      "initial_delay_ms": 1000,
+      "max_delay_ms": 10000,
+      "circuit_breaker_threshold": 10
+    },
+    "memory": {
+      "enabled": true,
+      "auto_capture": true
+    },
+    "immune": {
+      "enabled": true,
+      "sensitivity": 1.0,
+      "autoregulate": true
+    },
+    "humoral_immune": {
+      "enabled": false,
+      "activation_threshold": 2
+    },
+    "emotion": {
+      "enabled": true,
+      "method": "behavioral",
+      "full": false
+    },
+    "tracking": {
+      "enabled": false
+    },
+    "hooks": {
+      "enabled": false
+    }
+  },
+  "habitat": {
+    "mode": "local",
+    "home_dir": "experiments/experience_results/gemini_cli_gemini-2_5-flash/creatures/exp_a_r1",
+    "max_storage_mb": 100,
+    "allow_network": false,
+    "persistent": true
+  },
+  "born_at": 1775950150.045931,
+  "session_count": 2
+}

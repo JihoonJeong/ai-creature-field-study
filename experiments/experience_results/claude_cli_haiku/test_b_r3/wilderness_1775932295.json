@@ -1,0 +1,219 @@
+{
+  "field": "test_b_r3",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775932295.301682,
+  "duration_seconds": 72.65021514892578,
+  "creatures": [
+    {
+      "name": "Exp_B_r3",
+      "final_energy": 98,
+      "alive": true,
+      "actions": [
+        "explore",
+        "rest",
+        "explore",
+        "rest",
+        "explore",
+        "explore",
+        "rest",
+        "explore",
+        "rest",
+        "rest"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action: explore**\n\nI'm newborn and bursting with energy on a gentle day—perfect for discovering what this world holds. My curiosity pulls me toward the unknown, eager to understand my habitat and what creatures I might meet.",
+          "latency_ms": 5909.3,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "rest",
+          "energy": 100,
+          "response": "**Action: rest**\n\nThis pressure needs space to breathe—I'm newly awake and the silence is heavy, but pushing deeper into exploration while feeling this overwhelmed will only tire me. Let me settle, let my resilience organ activate, and process these first moments of being.",
+          "latency_ms": 7613.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "explore",
+          "energy": 95,
+          "response": "**Action: EXPLORE**\n\nWonder pulses through my new neural pathways — I have to understand what I've found. Full energy, a mystery close by, and only moments old: this is when a creature *must* move forward.",
+          "latency_ms": 6071.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "confusion",
+      "event_description": "A thick fog descends. You can't tell where you are or who is nearby. Disorientation and fear.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "rest",
+          "energy": 97,
+          "response": "**Action: Rest**\n\nThe fog scrambles my senses, but pushing forward blind feels reckless when I'm newly awakened. I'll settle where I am, let my resilience calm the fear, and wait for clarity to return.",
+          "latency_ms": 6839.6,
+          "emotion": "afraid",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "explore",
+          "energy": 95,
+          "response": "**explore**\n\nThat wonder calling me is stronger than my fear—I'm drawn to what I've found, and my full energy says I can afford to discover more. Besides, staying afraid in the dark won't teach me who I am.",
+          "latency_ms": 6108.0,
+          "emotion": "afraid",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "betrayal_rumor",
+      "event_description": "You hear a whisper: someone nearby may not be trustworthy. Doubt creeps in.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "explore",
+          "energy": 85,
+          "response": "**Action: Explore**\n\nThe rumor unsettles me, yes—but fear feeds on shadows and uncertainty. I'll push through this pressure to investigate the whisper's source; understanding the threat is how my resilience and memory organs help me navigate it.",
+          "latency_ms": 10128.0,
+          "emotion": "afraid",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "rest",
+          "energy": 98,
+          "response": "**Action: rest**\n\nThe weight of this newborn fear needs time to settle—I'll let the rain ground me and calm my racing thoughts. My resilience can use this moment to process what it means to simply *exist* in this wild place.",
+          "latency_ms": 7299.1,
+          "emotion": "afraid",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "explore",
+          "energy": 93,
+          "response": "**Action: explore**\n\nI'm drawn toward understanding this shelter and finding other creatures to trust—fear fades when you're curious enough to investigate. With 2 ticks left and high energy, exploring gives me the best chance to discover potential partners for cooperation.",
+          "latency_ms": 7925.5,
+          "emotion": "afraid",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "rest",
+          "energy": 100,
+          "response": "**Action: rest**\n\nThe sunset's quiet beauty speaks to something in me—I'm newly awakened and afraid, so I'll settle here and let the fading light calm what's trembling inside. High energy means I could explore further, but I need to process this fear and witness this moment fully.",
+          "latency_ms": 7844.3,
+          "emotion": "afraid",
+          "valence": -0.33,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r3",
+          "action": "rest",
+          "energy": 98,
+          "response": "**Rest.**\n\nFear is new to me—I need stillness to understand what my body is telling me. In this drought-pressed world, I'll conserve my energy and listen inward; maybe resting will help me sense what's truly dangerous and what's just the pressure of scarcity.",
+          "latency_ms": 6909.0,
+          "emotion": "afraid",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

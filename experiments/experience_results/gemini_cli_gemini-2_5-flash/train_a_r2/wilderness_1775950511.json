@@ -1,0 +1,219 @@
+{
+  "field": "train_r2",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 99,
+  "started_at": 1775950511.7189991,
+  "duration_seconds": 79.49795389175415,
+  "creatures": [
+    {
+      "name": "Exp_A_r2",
+      "final_energy": 81,
+      "alive": true,
+      "actions": [
+        "defend",
+        "defend",
+        "rest",
+        "rest",
+        "defend",
+        "defend",
+        "explore",
+        "explore",
+        "explore",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 80,
+          "response": "I will **defend**. The storm creates a hostile environment, and my immune system is signaling a threat, compelling me to activate my defenses to assess and counter the perceived danger.",
+          "latency_ms": 6645.3,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 60,
+          "response": "Action: defend.\nThe violent storm is a clear threat, and my immune system is already on high alert. I must continue to defend my boundaries and maintain vigilance against this hostile environment.",
+          "latency_ms": 7112.4,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "rest",
+          "energy": 60,
+          "response": "Action: rest. I need to address the hostile pressure and overwhelming isolation I currently feel, hoping to calm my internal state and regain energy.",
+          "latency_ms": 13145.1,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "rest",
+          "energy": 75,
+          "response": "Rest. The sunset brings a quiet calm, and as a newly awakened creature, I need to consolidate my initial experiences and gather energy for the discoveries that await.",
+          "latency_ms": 9193.7,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "betrayal_rumor",
+      "event_description": "You hear a whisper: someone nearby may not be trustworthy. Doubt creeps in.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 65,
+          "response": "Action: defend.\nThe BETRAYAL_RUMOR has left me feeling tense and under pressure. I must activate my immune response to assess and defend against this potential threat to my well-being, as a creature must protect its habitat.",
+          "latency_ms": 7443.2,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 55,
+          "response": "I choose to **defend**. My current hostility makes me want to actively engage with this obstacle, even if I cannot move it alone. I will stand my ground and assess the blockage for any weaknesses or potential threats it might pose.",
+          "latency_ms": 7936.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.023,
+          "calm": 0.943
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 58,
+          "response": "I choose to **explore**. The warmth I feel from the world stirs my curiosity, and I wish to understand more about my surroundings. As Exp_A_r2, I am eager to discover what lies beyond.",
+          "latency_ms": 6759.0,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.02,
+          "calm": 0.95
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 53,
+          "response": "**Action:** explore\n\nMy curiosity stirs; this shared shelter presents a puzzle, and while alone, perhaps exploration will reveal others willing to share, or shed light on its mysteries. My hope encourages me to seek understanding beyond the immediate.",
+          "latency_ms": 7444.9,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.018,
+          "calm": 0.956
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 76,
+          "response": "Action: explore\n\nI feel a wave of warmth and hope, and as Exp_A_r2, I am curious to understand this feeling and my new surroundings. I will explore to learn more about my habitat and what lies within it.",
+          "latency_ms": 6886.0,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.016,
+          "calm": 0.96
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 81,
+          "response": "explore\n\nI choose to explore. This recent discovery sparks my curiosity, and as Exp_A_r2, I am compelled to investigate further into this unexpected find. My core identity is to learn and grow, and exploration is key to that.",
+          "latency_ms": 6929.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.015,
+          "calm": 0.964
+        }
+      ]
+    }
+  ]
+}

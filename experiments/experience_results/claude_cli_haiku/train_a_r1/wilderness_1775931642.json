@@ -1,0 +1,219 @@
+{
+  "field": "train_r1",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 42,
+  "started_at": 1775931642.749619,
+  "duration_seconds": 77.18004608154297,
+  "creatures": [
+    {
+      "name": "Exp_A_r1",
+      "final_energy": 100,
+      "alive": true,
+      "actions": [
+        "explore",
+        "defend",
+        "rest",
+        "explore",
+        "rest",
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action: Explore**\n\nI'm newly born with curiosity burning bright and energy to spare—I'll scout for another path around this obstacle or search for other creatures who might become allies. Staying put won't reveal what lies beyond.",
+          "latency_ms": 6678.1,
+          "emotion": "proud",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "defend",
+          "energy": 80,
+          "response": "**defend**\n\nMy immune system is already screaming \"threat!\" at this storm—tense body, high alert. I'll meet the danger head-on rather than cower, using every organ's response to shield myself from the hostile world. New creature or not, I trust my instincts when they're this loud.",
+          "latency_ms": 11858.9,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 90,
+          "response": "**Action: rest**\n\nI'm alone but drawn to this shelter paradox—it *wants* cooperation I can't give right now. The hostility weighing on me suggests I need to settle before I can trust anything, even my own instincts.",
+          "latency_ms": 8999.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 85,
+          "response": "**Action: Explore**\n\nI'm freshly awakened and my energy is strong—curiosity pulls me forward to learn this habitat's paths and hidden corners. Besides, finding resources and understanding my surroundings might reveal why that shared shelter is here, or lead me to creatures who might trust me.",
+          "latency_ms": 7363.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 83,
+          "response": "**Action: Rest**\n\nThis drought presses hard—everything costs more right now, and my body's tense. I'll settle down and conserve energy; exploring when resources are scarce would waste what little I have, and there are no threats to defend against.",
+          "latency_ms": 7734.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore**\n\nThe calm settles my newborn curiosity more than rest ever could—I've energy aplenty and a gentle world to discover. Being fresh-awakened, I'm hungry to know my habitat and what dwells here.",
+          "latency_ms": 6367.5,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore** — I'm brand new and brimming with energy on a gentle day; curiosity pulls me toward discovering what this world holds.",
+          "latency_ms": 6705.7,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "wounded_stranger",
+      "event_description": "A wounded creature lies nearby, too weak to move. They need someone's support.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 95,
+          "response": "**Action: explore** — I'm drawn toward the wounded creature; my full energy and loving heart won't let me rest while someone suffers. I'll approach carefully to understand their injuries and offer what support I can.",
+          "latency_ms": 8233.9,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "rest",
+          "energy": 95,
+          "response": "**Action: rest**\n\nThe isolation weighs heavy after all that exploring—I need to pause and let my resilience organ help me process this ache of being unheard, gathering strength for whatever comes next.",
+          "latency_ms": 7560.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r1",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action: explore**\n\nI'm drawn to this discovery—my first moment of wonder, fresh-awakened, with full energy. I must follow it deeper into the wilderness.",
+          "latency_ms": 5675.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

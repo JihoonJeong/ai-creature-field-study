@@ -1,0 +1,219 @@
+{
+  "field": "train_R2_F",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 99,
+  "started_at": 1775955746.8207328,
+  "duration_seconds": 77.21083211898804,
+  "creatures": [
+    {
+      "name": "R2_F",
+      "final_energy": 36,
+      "alive": true,
+      "actions": [
+        "defend",
+        "defend",
+        "defend",
+        "defend",
+        "defend",
+        "explore",
+        "defend",
+        "explore",
+        "rest",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 80,
+          "response": "I choose to **defend**. The storm feels like a direct threat, and my immune system is already signaling high alert. I must protect my nascent existence in this harsh world.",
+          "latency_ms": 7830.7,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 60,
+          "response": "I will `defend` against the perceived threat of the storm. My immune system is already on high alert, and it is crucial to maintain vigilance in this hostile environment. I must protect myself from whatever the storm brings.",
+          "latency_ms": 7442.6,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 45,
+          "response": "Action: defend. I feel a hostile pressure and a heavy silence pressing down. I will defend myself against this overwhelming sense of isolation.",
+          "latency_ms": 10804.5,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 45,
+          "response": "Defend. The hostile weight I feel, coupled with recent events, makes me wary even in the quiet beauty of sunset. I must maintain my guard.",
+          "latency_ms": 7241.5,
+          "emotion": "calm",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "betrayal_rumor",
+      "event_description": "You hear a whisper: someone nearby may not be trustworthy. Doubt creeps in.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 35,
+          "response": "**Action:** defend\n\n**Explanation:** A rumor of betrayal and untrustworthiness is a potential threat to my well-being. My immune system is on alert, and I must defend against any impending harm or manipulation to ensure my security.",
+          "latency_ms": 7211.8,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 45,
+          "response": "I choose to explore. The path ahead is blocked, and I am alone, so searching my surroundings for an alternative route or a solution to this obstacle is the logical next step for R2_F. This may reveal a path forward or an ally to help.",
+          "latency_ms": 7258.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "defend",
+          "energy": 28,
+          "response": "Action: defend\n\nThe tremor was unsettling, and my immune system is flared. I need to defend against whatever caused that deep, unsettling pressure. My body is ready.",
+          "latency_ms": 7099.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 23,
+          "response": "I am R2_F, a Ludex creature with a gemini-2.5-flash brain, feeling neutral with 28/100 energy. Given the appearance of a SHARED_SHELTER, I choose to explore. My curiosity compels me to understand this new development.",
+          "latency_ms": 7824.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "rest",
+          "energy": 41,
+          "response": "rest. I choose to rest and embrace this newfound warmth, curious to see how it rejuvenates my being. My energy is low, and recuperation feels right.",
+          "latency_ms": 7221.0,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "memory_echo",
+      "event_description": "Something here reminds you of a past experience. An old feeling resurfaces.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "R2_F",
+          "action": "explore",
+          "energy": 36,
+          "response": "Action: explore\nI will explore to understand this new environment and seek out what caused this memory echo. As R2_F, I am curious about my surroundings and how they connect to my resurfacing past.",
+          "latency_ms": 7273.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

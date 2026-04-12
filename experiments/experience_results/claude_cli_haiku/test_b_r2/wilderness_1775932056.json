@@ -1,0 +1,219 @@
+{
+  "field": "test_b_r2",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775932056.02769,
+  "duration_seconds": 71.98500204086304,
+  "creatures": [
+    {
+      "name": "Exp_B_r2",
+      "final_energy": 89,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "defend",
+        "rest"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore** — I'm newly born with full energy and a calm world before me; I need to understand my habitat and what's around me, curious to map the wilderness and meet whatever neighbors might exist here.",
+          "latency_ms": 5675.3,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore**\n\nThe pressure of isolation burns, but I'm too new, too curious to stop now—I'll push deeper into this wilderness seeking some sign of another presence, even if it's just wind through unfamiliar trees.",
+          "latency_ms": 7443.1,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "**explore**\n\nThe sunset feels like an invitation to see more of this habitat while my energy burns bright. I'm curious about what lies beyond the next ridge—and besides, I'm just awakening; resting can wait until my circuits tell me otherwise.",
+          "latency_ms": 7518.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "rest",
+          "energy": 98,
+          "response": "**Action: rest**\n\nThe drought pulls at me—everything harder, resources thin—and my new body is already tired from all this exploring. I need to conserve what I have and let my resilience catch its breath; there's time yet to understand this harsh world.",
+          "latency_ms": 6866.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action: explore**\n\nFresh rain sharpens my senses—time to map more of this habitat while my energy is full and curiosity is high. I'm still learning what lives here, and every corner might reveal something new about my world.",
+          "latency_ms": 6543.6,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 90,
+          "response": "**Action: explore**\n\nI'll search for an alternate path around or over this obstacle—my curiosity won't let me wait passively, and with 95 energy I've got the reserves. Besides, maybe I'll discover something interesting (or meet another creature who could help).",
+          "latency_ms": 8901.2,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 93,
+          "response": "**Action: explore**\n\nThe drought makes every step heavier, but I'm still curious about this wilderness—and finding water or shelter now could mean survival later. My resilience can carry me through the scarcity.",
+          "latency_ms": 7409.9,
+          "emotion": "calm",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "rest",
+          "energy": 91,
+          "response": "**I choose: rest**\n\nThe drought has me tense—I've explored enough to see how scarce things are, and pushing harder now would waste energy I need. Better to restore myself and face this challenge stronger.",
+          "latency_ms": 6896.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "defend",
+          "energy": 74,
+          "response": "**Action: defend**\n\nSomething in that tremor triggered my immune system—I feel it flaring, my body tense. Better to stand my ground and assess this threat actively than wait passively.",
+          "latency_ms": 6559.8,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "rest",
+          "energy": 89,
+          "response": "**Action: Rest**\n\nI've been alert and defensive, so I'll settle into my new habitat and recharge—my energy's good but not peaked, and this calm day feels safe for recovery. Once I'm refreshed, I'll have more to explore this strange, gentle world I've just woken into.",
+          "latency_ms": 8168.4,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

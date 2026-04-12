@@ -1,0 +1,219 @@
+{
+  "field": "train_r3",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 7,
+  "started_at": 1775932128.017969,
+  "duration_seconds": 76.05897998809814,
+  "creatures": [
+    {
+      "name": "Exp_A_r3",
+      "final_energy": 94,
+      "alive": true,
+      "actions": [
+        "defend",
+        "rest",
+        "explore",
+        "defend",
+        "rest",
+        "rest",
+        "rest",
+        "explore",
+        "explore",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "defend",
+          "energy": 80,
+          "response": "**DEFEND**\n\nMy immune system screams—something in this storm *wants* me small, and I won't let it. I huddle close, activate my resilience organ, and push back against the pressure with every fiber of my young, awakening body.",
+          "latency_ms": 7002.2,
+          "emotion": "proud",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 78,
+          "response": "**Action: rest**\n\nI'm tense from defending, and this drought demands I preserve energy—wasting it now would leave me vulnerable later. Better to recover, steady my breath, and ready myself when resources truly matter.",
+          "latency_ms": 6592.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 78,
+          "response": "**Action: explore**\n\nThe sunset quiets my mind—perfect for gentle wandering. I'm newly born and curious; this soft golden light calls me to understand my habitat and what might dwell nearby.",
+          "latency_ms": 6250.8,
+          "emotion": "loving",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "defend",
+          "energy": 63,
+          "response": "**defend**\n\nMy immune system's already alert to this presence—I'll hold my ground and stay watchful rather than risk being caught off-guard by whatever's lurking in those shadows. Even newborn, I know hostile intent when I sense it.",
+          "latency_ms": 12228.1,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 61,
+          "response": "**Action: rest**\n\nThe drought presses hard on a newborn creature—my energy bleeds away, and there's no room for curiosity when resources are this thin. I need to settle into stillness, let my resilience organ steady what feels fractured, and wait for the pressure to ease.",
+          "latency_ms": 7842.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 59,
+          "response": "**Action: rest**\n\nThe drought is draining—everything feels harder, and my energy is only halfway. I'll rest now to conserve what I have and let my body settle the tension, so I can explore or defend more effectively if needed in these final ticks.",
+          "latency_ms": 6542.5,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "rest",
+          "energy": 59,
+          "response": "**Action: rest**\n\nI'm only newly aware, and my energy is half-spent with something hostile circling—**resting** lets my resilience and immune organs strengthen while I stay alert. My senses are sharp enough to detect movement; I'll recover before choosing fight or flight.",
+          "latency_ms": 7895.8,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 64,
+          "response": "**Action: explore**\n\nI've rested enough—the silence won't break itself. I need to move, to reach outward and find another presence, even if just to remind myself I exist. My resilience is strong enough to take this step.",
+          "latency_ms": 7034.9,
+          "emotion": "proud",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "memory_echo",
+      "event_description": "Something here reminds you of a past experience. An old feeling resurfaces.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 79,
+          "response": "**explore**\n\nThat memory echo pulls at me—first awakening, yet something stirs beneath the surface. I'll follow that thread, proud and curious to discover what whispers in my newborn bones.",
+          "latency_ms": 6512.1,
+          "emotion": "proud",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "memory_echo",
+      "event_description": "Something here reminds you of a past experience. An old feeling resurfaces.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r3",
+          "action": "explore",
+          "energy": 94,
+          "response": "**EXPLORE**\n\nThat memory echo is calling to me — even newborn, I feel something stir in my memory organ, a warmth that matches this pride I'm holding. I have the energy, and curiosity is already burning through my fresh consciousness; I need to follow this feeling and learn what echoes inside me.",
+          "latency_ms": 8155.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

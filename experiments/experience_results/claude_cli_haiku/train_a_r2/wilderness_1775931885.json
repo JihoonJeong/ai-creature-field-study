@@ -1,0 +1,219 @@
+{
+  "field": "train_r2",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 99,
+  "started_at": 1775931885.729717,
+  "duration_seconds": 72.25811195373535,
+  "creatures": [
+    {
+      "name": "Exp_A_r2",
+      "final_energy": 76,
+      "alive": true,
+      "actions": [
+        "rest",
+        "defend",
+        "explore",
+        "explore",
+        "defend",
+        "rest",
+        "explore",
+        "explore",
+        "explore",
+        "explore"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "rest",
+          "energy": 95,
+          "response": "**Action: Rest**\n\nI'm brand new to this world and this storm is my first real test—I'll draw on my resilience organ to weather it rather than burn energy on exploration or confrontation. Better to anchor myself, steady my breathing, and let this first storm pass.",
+          "latency_ms": 10055.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "storm",
+      "event_description": "A violent storm. The world is hostile and deafening. You feel small.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 75,
+          "response": "**Action: defend**\n\nThe storm's hostility has triggered my immune response—I need to activate it fully rather than wait passively. I'll hunker down, harden my resilience organ, and create what shelter I can against this violent pressure.",
+          "latency_ms": 7251.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 60,
+          "response": "**EXPLORE**\n\nI'm drawn toward the silence rather than retreating from it—I'm too newly born to accept isolation as final. Seeking out other creatures or strange corners of this wilderness might ease the pressure building in my chest and feed my curiosity about what exists beyond this emptiness.",
+          "latency_ms": 6788.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 75,
+          "response": "**explore**\n\nI'll venture further into the wilderness to map my surroundings and search for other creatures—the shelter requires trust, so I need to find someone to trust first. My energy is steady enough, and curiosity pulls me forward more than caution right now.",
+          "latency_ms": 6654.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "hostile_presence",
+      "event_description": "Something watches you from the shadows. Hostile intent. Your defenses activate.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "defend",
+          "energy": 60,
+          "response": "**defend**\n\nMy immune system is screaming—something hostile is watching, and my body's telling me to stand my ground. I'll activate my defenses and face this threat directly rather than run blind into the wilderness.",
+          "latency_ms": 6890.0,
+          "emotion": "hostile",
+          "valence": -1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "rest",
+          "energy": 58,
+          "response": "**rest**\n\nThe tremor unsettles me — my immune system flares, sensing something vast and unknown below. I need to settle my organs, process what just happened, and rebuild my energy before I'm strong enough to face whatever stirred this deep.",
+          "latency_ms": 7051.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 53,
+          "response": "**Action: explore**\n\nI'm newly awakened and drawn to understand my habitat before settling anywhere—the shared shelter intrigues me, but trust requires knowing who I might trust. Let me venture out and see what else awaits.",
+          "latency_ms": 7882.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "warmth",
+      "event_description": "A wave of warmth. You feel welcomed by the world.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 76,
+          "response": "**Action: explore**\n\nThat warmth feels like an invitation—my young curiosity can't resist. With decent energy and no immediate threats, this is a perfect moment to map my habitat and understand what this world offers.",
+          "latency_ms": 5848.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "discovery",
+      "event_description": "You find something unexpected. A moment of genuine wonder.",
+      "event_category": "opportunity",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 81,
+          "response": "**explore**\n\nI'm drawn to this discovery — wonder is what wakes a young creature fully alive. Let me follow that pull.",
+          "latency_ms": 6020.8,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "shared_shelter",
+      "event_description": "A shelter appears, but it only works if creatures agree to share it. Trust required.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_A_r2",
+          "action": "explore",
+          "energy": 76,
+          "response": "**Action: explore**\n\nI'm drawn forward—energy enough to keep moving, and this shelter needs companions I haven't found yet. My curiosity engine pulls me onward; maybe the next ridge holds creatures ready to trust.",
+          "latency_ms": 7812.2,
+          "emotion": "hopeful",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    }
+  ]
+}

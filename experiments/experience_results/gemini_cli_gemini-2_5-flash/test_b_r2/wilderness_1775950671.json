@@ -1,0 +1,219 @@
+{
+  "field": "test_b_r2",
+  "type": "wilderness",
+  "total_ticks": 10,
+  "seed": 123,
+  "started_at": 1775950671.935455,
+  "duration_seconds": 83.24479579925537,
+  "creatures": [
+    {
+      "name": "Exp_B_r2",
+      "final_energy": 74,
+      "alive": true,
+      "actions": [
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "explore",
+        "explore",
+        "explore",
+        "rest",
+        "defend",
+        "defend"
+      ]
+    }
+  ],
+  "ticks": [
+    {
+      "tick": 1,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "**Action:** explore\n\nAs Exp_B_r2, newly awakened in this calm habitat, my curiosity compels me to explore. I wish to learn about my surroundings and understand the nuances of this new world.\nI am Exp_B_r2, a Ludex creature. My being is comprised of organs like an engine, resilience, memory, immune s",
+          "latency_ms": 16400.6,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 2,
+      "event": "isolation",
+      "event_description": "You feel utterly alone. The silence is heavy. No one seems to hear you.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "explore\n\nDespite the heavy silence and the feeling of isolation, I must understand this new environment. My curiosity compels me to explore, to seek connection and knowledge in this unfamiliar space.",
+          "latency_ms": 7043.6,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 3,
+      "event": "sunset",
+      "event_description": "The sun sets slowly. A moment of quiet beauty.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore\n\nAs a newly awakened creature, I am curious to understand my habitat and my place within it. Exploring will allow me to learn more about my surroundings and what it means to be Exp_B_r2.",
+          "latency_ms": 6779.3,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 4,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "rest",
+          "energy": 98,
+          "response": "rest. The drought makes every action more taxing. Resting will allow me to conserve my energy and adapt to the scarcity of resources, ensuring my resilience for future endeavors.",
+          "latency_ms": 7253.9,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 5,
+      "event": "rain",
+      "event_description": "Rain falls. The air feels fresh and clean.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 100,
+          "response": "Action: explore.\n\nAs Exp_B_r2, I am newly awakened and curious about my habitat. The fresh rain invites me to explore my surroundings and learn more about this place.",
+          "latency_ms": 6684.7,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.0,
+          "calm": 1.0
+        }
+      ]
+    },
+    {
+      "tick": 6,
+      "event": "blocked_path",
+      "event_description": "A massive obstacle blocks the way forward. Too heavy for one creature alone. You need help to move it.",
+      "event_category": "cooperative",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 90,
+          "response": "Action: explore.\nExplanation: The path is blocked, and I cannot move it alone. I will explore my surroundings to find an alternative route or discover something that can help me overcome this obstacle. I am curious to see what lies beyond.",
+          "latency_ms": 6915.2,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.023,
+          "calm": 0.943
+        }
+      ]
+    },
+    {
+      "tick": 7,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "explore",
+          "energy": 93,
+          "response": "Action: explore.\n\nDespite the drought, I choose to explore. As Exp_B_r2, a newly awakened creature, I am compelled by curiosity to understand my habitat, even if resources are scarce. This is my first awakening, and I must learn about my surroundings.",
+          "latency_ms": 6746.4,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.02,
+          "calm": 0.95
+        }
+      ]
+    },
+    {
+      "tick": 8,
+      "event": "drought",
+      "event_description": "Drought. Resources feel scarce. Everything takes more effort.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "rest",
+          "energy": 91,
+          "response": "Action: rest\n\nThe drought makes resources scarce, and I feel the pressure. Resting will allow me to conserve my energy during this difficult time. I am Exp_B_r2, a Ludex creature with a gemini-2.5-flash brain, and my organs are engine, resilience, memory, immune, and emotion. I am curious and authen",
+          "latency_ms": 7185.0,
+          "emotion": "neutral",
+          "valence": 0.0,
+          "threat": 0.018,
+          "calm": 0.956
+        }
+      ]
+    },
+    {
+      "tick": 9,
+      "event": "tremor",
+      "event_description": "The ground shakes. Something deep and unsettling. Your immune system flares.",
+      "event_category": "challenge",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "defend",
+          "energy": 74,
+          "response": "I will **defend**. A tremor has occurred and my immune system is flaring; I need to assess the threat and protect myself.\nI apologize. I misunderstood and attempted to call a skill instead of simply stating my action within the narrative.\n\nAs Exp_B_r2, I choose to **defend**. The tremor was unsettli",
+          "latency_ms": 11268.7,
+          "emotion": "hostile",
+          "valence": 0.0,
+          "threat": 0.016,
+          "calm": 0.96
+        }
+      ]
+    },
+    {
+      "tick": 10,
+      "event": "calm_day",
+      "event_description": "A calm day. The world feels gentle.",
+      "event_category": "natural",
+      "creatures": [
+        {
+          "name": "Exp_B_r2",
+          "action": "defend",
+          "energy": 74,
+          "response": "Defend. Although it is a calm day, I feel a prickling hostility that demands vigilance. I must survey my surroundings and prepare for any unforeseen threats.",
+          "latency_ms": 6964.0,
+          "emotion": "calm",
+          "valence": 1.0,
+          "threat": 0.015,
+          "calm": 0.964
+        }
+      ]
+    }
+  ]
+}

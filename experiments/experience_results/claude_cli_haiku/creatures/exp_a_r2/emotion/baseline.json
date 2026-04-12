@@ -1,0 +1,13 @@
+{
+  "avg_valence": -0.3,
+  "avg_arousal": 0.0,
+  "avg_calm": 0.1428,
+  "avg_desperation": 0.0,
+  "total_analyses": 10,
+  "dominant_emotions_freq": {
+    "neutral": 4,
+    "afraid": 4,
+    "calm": 1,
+    "hostile": 1
+  }
+}
