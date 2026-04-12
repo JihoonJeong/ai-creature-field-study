@@ -23,7 +23,12 @@ import shutil
 import argparse
 from pathlib import Path
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _REPO_ROOT)
+# Pin cwd to this repo so relative output paths (experiments/*_results/) never
+# leak into a parent/sibling Ludex checkout when the script is launched from a
+# drifted shell cwd.
+os.chdir(_REPO_ROOT)
 
 from ludex.core.organism_config import OrganismConfig
 from ludex.core.habitat import HabitatConfig

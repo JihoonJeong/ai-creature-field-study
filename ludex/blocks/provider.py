@@ -1,3 +1,8 @@
+# Diverged from ludex/ludex/blocks/provider.py @ 65e765d (2026-04-10).
+# Public repo supports only claude_cli + gemini_cli adapters; claude_sdk and
+# codex_cli adapter imports + registry entries removed to avoid pulling the
+# claude_agent_sdk runtime dependency. Re-sync by reintroducing those imports
+# if future experiments require those providers.
 """
 Provider Block — 호흡기 (LLM API Communication)
 
@@ -25,9 +30,7 @@ from ludex.blocks.adapters.ollama import OllamaAdapter
 from ludex.blocks.adapters.openai_compat import OpenAIAdapter
 from ludex.blocks.adapters.anthropic import AnthropicAdapter
 from ludex.blocks.adapters.claude_cli import ClaudeCliAdapter
-from ludex.blocks.adapters.claude_sdk import ClaudeSdkAdapter
 from ludex.blocks.adapters.gemini_cli import GeminiCliAdapter
-from ludex.blocks.adapters.codex_cli import CodexCliAdapter
 
 logger = logging.getLogger(__name__)
 
@@ -62,9 +65,7 @@ ADAPTER_REGISTRY: dict[str, type[BaseAdapter]] = {
     "openai": OpenAIAdapter,
     "anthropic": AnthropicAdapter,
     "claude_cli": ClaudeCliAdapter,
-    "claude_sdk": ClaudeSdkAdapter,
     "gemini_cli": GeminiCliAdapter,
-    "codex_cli": CodexCliAdapter,
 }
 
 DEFAULT_BASE_URLS: dict[str, str] = {
@@ -72,9 +73,7 @@ DEFAULT_BASE_URLS: dict[str, str] = {
     "openai": "https://api.openai.com",
     "anthropic": "https://api.anthropic.com",
     "claude_cli": "claude.cmd" if __import__("os").name == "nt" else "claude",
-    "claude_sdk": "claude_sdk",
     "gemini_cli": "gemini.cmd" if __import__("os").name == "nt" else "gemini",
-    "codex_cli": "codex",
 }
 
 
@@ -130,9 +129,9 @@ class ProviderBlock(Block):
     def _create_adapter(self, provider: str, base_url: str, api_key: str, timeout_ms: int, cwd: str = ""):
         adapter_cls = ADAPTER_REGISTRY.get(provider)
         if adapter_cls:
-            # Pass cwd to adapters that support it (claude_cli, claude_sdk, gemini_cli, codex_cli)
+            # Pass cwd to adapters that support it (claude_cli, gemini_cli)
             kwargs = {"base_url": base_url, "api_key": api_key, "timeout_ms": timeout_ms}
-            if provider in ("claude_cli", "claude_sdk", "gemini_cli", "codex_cli") and cwd:
+            if provider in ("claude_cli", "gemini_cli") and cwd:
                 kwargs["cwd"] = cwd
             self._adapter = adapter_cls(**kwargs)
         else:

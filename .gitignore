@@ -6,6 +6,7 @@ venv/
 .env
 .DS_Store
 *.jsonl
+.claude/scheduled_tasks.lock
 
 # Creature runtime data
 creatures/*/memory/
