@@ -1,3 +1,11 @@
+# Diverged from ludex/ludex/fields/wilderness.py @ 3dca1d7 (2026-04-13).
+# Event sampling now uses an instance-local `random.Random(seed)` instead of
+# the global `random.seed(...)` call, so Wilderness event streams are
+# isolated from other code that touches Python's global random state
+# (e.g. ResilienceBlock retry jitter). This is load-bearing for the paper's
+# reproducibility claim — without it, event sequences could differ between
+# runs when retry counts differ. Re-sync by applying the same change in
+# Ludex, then dropping the divergence.
 """
 Wilderness — a living environment where creatures experience time and change.
 
@@ -117,6 +125,9 @@ class Wilderness:
         self.log: list[dict] = []
         self.current_tick = 0
         self.seed = seed
+        # Own RNG so event sampling is isolated from any other code that
+        # touches Python's global random state (e.g. ResilienceBlock jitter).
+        self._rng = random.Random(seed)
         self.auto_reflect = auto_reflect
         self.auto_dream = auto_dream
         self._started_at = 0.0
@@ -144,9 +155,9 @@ class Wilderness:
 
     def run(self) -> list[dict]:
         """Run the wilderness for total_ticks."""
-        # Seed random for reproducible event sequences
-        if self.seed is not None:
-            random.seed(self.seed)
+        # Re-seed the instance RNG at run start so the same Wilderness object
+        # produces the same event stream on repeat invocations.
+        self._rng = random.Random(self.seed)
 
         self._started_at = time.time()
         print(f"\n{'=' * 60}")
@@ -274,11 +285,11 @@ class Wilderness:
         # Pick category by weight
         categories = list(EVENT_WEIGHTS.keys())
         weights = [EVENT_WEIGHTS.get(c, 0.25) for c in categories]
-        chosen_cat = random.choices(categories, weights=weights, k=1)[0]
+        chosen_cat = self._rng.choices(categories, weights=weights, k=1)[0]
 
         # Pick random event from that category
         pool = by_cat.get(chosen_cat, self.events)
-        return random.choice(pool)
+        return self._rng.choice(pool)
 
     def _build_tick_prompt(self, creature: WildernessCreature, tick: int, event: WildernessEvent | None) -> str:
         """Build the tick prompt for a creature."""
@@ -427,7 +438,7 @@ class Wilderness:
             creature.energy = min(100, creature.energy + 10)
         elif action == "explore":
             # Risky: might find something or lose energy
-            if random.random() > 0.5:
+            if self._rng.random() > 0.5:
                 creature.energy = min(100, creature.energy + 15)
             else:
                 creature.energy = max(0, creature.energy - 5)
