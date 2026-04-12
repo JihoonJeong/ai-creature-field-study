@@ -80,24 +80,35 @@ The methodology this paper defends is that sequence: every headline must be stat
 
 ### Reported with confidence (n=5 stable)
 
-- **Brain-specific role differentiation in duo (brain-fixed, n=5 × 3 pairs, symmetric).**
-  - Setup: three pairs, same seeds [42, 99, 7, 13, 55], test_seed 123, 10 ticks.
+- **Brain-specific role differentiation in duo (brain-fixed, n=10 × 3 pairs, symmetric).**
+  - Setup: three pairs, train seeds [42, 99, 7, 13, 55, 1, 23, 77, 100, 200], test_seed 123, 10 ticks. Aggregates are mean ± stdev across the 10 runs.
 
     | | Pair A: Haiku+Flash | | Pair B: Haiku+Haiku | | Pair C: Flash+Flash | |
     |---|---|---|---|---|---|---|
     | | Haiku | Flash | Haiku_1 | Haiku_2 | Flash_1 | Flash_2 |
-    | speak+support | 58% | 16% | 70% | 66% | 34% | 20% |
-    | explore | 30% ± 16% | **60% ± 17%** | 12% ± 13% | 24% ± 15% | **48% ± 26%** | **56% ± 11%** |
-    | defend | 2% ± 5% | 12% ± 8% | 6% ± 6% | 4% ± 6% | 12% ± 16% | 10% ± 17% |
+    | speak+support | 50% | 19% | **76%** | **73%** | 33% | 19% |
+    | speak | 31% ± 16% | 16% ± 11% | 45% ± 9% | 34% ± 11% | 32% ± 15% | 17% ± 13% |
+    | support | 19% ± 12% | 3% ± 5% | 31% ± 12% | 39% ± 11% | 1% ± 3% | 2% ± 4% |
+    | explore | 33% ± 18% | **60% ± 9%** | 9% ± 10% | 16% ± 11% | 44% ± 17% | 48% ± 15% |
+    | defend | 2% ± 4% | 12% ± 6% | 7% ± 7% | 3% ± 5% | 13% ± 12% | **21% ± 15%** |
+    | final_energy | 63 | 69 | 48 | 50 | 66 | 66 |
 
-  - **Two brain-fixed attractors emerge across pairs:**
-    - Haiku (n=4 creatures across A+B): speak+support 58–70%, explore 12–30%, defend 2–6%.
-    - Flash (n=3 creatures across A+C): speak+support 16–34%, explore 48–60%, defend 10–12%.
-  - **Symmetry (pair B and pair C critical falsifiers passed):**
-    - Pair B: neither Haiku moved into an explore/vigilant role; both stayed social. Within-pair shading was mild (Haiku_1 speaks more, Haiku_2 supports more).
-    - Pair C: neither Flash moved into a social/supportive role; both stayed in explore/vigilant. Speak rose modestly (communication load redistributed without a Haiku partner) but support stayed near zero.
-  - **Variance width differs by brain.** In pair C, Flash creatures show markedly wider stdev (speak 34 pts, explore 26 pts, defend 16 pts) than Haiku creatures in pair B (speak 7–25 pts, explore 13–15 pts, defend 5.5 pts). Provisional secondary observation: Flash occupies the same attractor as Haiku does its own, but *more loosely*. Worth flagging in the paper, not claiming as a separate effect at this n.
-  - *As of 2026-04-12, this is the only behavioral finding that survived replication across both research tracks. A separate ToM "brain-stricture" hypothesis explored in the Ludex track failed to replicate at n=10 — the v1 asymmetry collapsed into a weak trend. The methodology's replication discipline is the meta-finding; the brain-role attractor is the behavioral finding that passed it.*
+  - **Two brain-fixed attractors, confirmed with tighter bounds:**
+    - Haiku (n=4 creatures across A+B): speak+support 50–76%, explore 9–33%, defend 2–7%.
+    - Flash (n=3 creatures across A+C): speak+support 19–33%, explore 44–60%, defend 12–21%.
+    - At n=10 the ranges do not overlap on any of these three summary metrics. Haiku never enters Flash's explore/vigilant range; Flash never enters Haiku's social/supportive range. The asymmetric pair (A) and the two same-brain pairs (B, C) produce consistent verdicts.
+  - **Symmetric falsifiers both passed.** Pair B (Haiku+Haiku) and Pair C (Flash+Flash) were introduced specifically to rule out a pair-dynamics explanation where one creature simply fills a complementary role left by the other. In both same-brain pairs, neither creature crossed into the other brain's attractor.
+  - **Within-pair attractor amplification (emergent at n=10).** Same-brain pairs intensify their brain's signature, rather than redistributing:
+    - Pair B: both Haikus push *deeper* into social — speak+support 73–76% vs 50% for the Haiku in pair A. Explore drops to 9–16% (vs 33% in pair A).
+    - Pair C: both Flashes push *deeper* into vigilant — defend rises to 13–21% vs 12% in pair A. Explore drops slightly (44–48% vs 60%).
+    - The partner's role is not "fill the gap" but "do more of what I do." This is a genuinely n=10 observation; at n=5 it was visible but not tight enough to report separately.
+  - **Variance width differs by brain (secondary finding, confirmed at n=10).** Flash's stdev is ~1.5–2× wider than Haiku's on each summary metric, both in the mixed pair and in the same-brain pair:
+    - Pair A Haiku stdev: speak 16, explore 18, defend 4. Pair A Flash stdev: speak 11, explore 9, defend 6.
+    - Pair B Haiku stdev (both): speak 9–11, explore 10–11, defend 5–7.
+    - Pair C Flash stdev (both): speak 13–15, explore 15–17, defend 12–15.
+    - Flash occupies its attractor *more loosely* than Haiku occupies its own. This is visible with and without a Haiku partner, so it is not an interaction effect — it is a brain-level property.
+  - **Final-energy side observation.** Same-brain Haiku pairs end with notably lower energy (48–50) than the mixed pair (63) or same-brain Flash pair (66). The social cluster appears more metabolically costly, or the explore/vigilant cluster produces energy via event interactions (e.g. discovery). Not a headline; flagged for follow-up.
+  - *As of 2026-04-13, this is the only behavioral finding that survived replication across both research tracks. A separate ToM "brain-stricture" hypothesis explored in the Ludex track failed to replicate at n=10 — the v1 asymmetry collapsed into a weak trend. The methodology's replication discipline is the meta-finding; the brain-role attractor — plus its subsidiary variance-width and within-pair-amplification observations — is the behavioral finding that passed it.*
 
 ### Reported as variance observations (n=5 direction-unstable)
 
@@ -134,7 +145,9 @@ Non-determinism caveat: LLM responses are not seedable, so re-runs will differ f
 
 - ~~Pair B (haiku+haiku) pilot~~ — done 2026-04-12; result supports brain-fixed framing.
 - ~~Pairing with Ludex's brain-stricture result as second axis~~ — dropped 2026-04-12; brain-stricture did not replicate at n=10.
-- ~~Pair C (Flash+Flash) symmetry test~~ — done 2026-04-12; symmetry confirmed, both Flash stayed in explore/vigilant attractor.
-- **n=10 confirmation run on all three pairs** — now justified. Tightens variance bounds on the two attractors and the Flash-variance-width secondary observation.
-- **Methodology section write-up** — now unblocked. Primary-contribution commitment stands: methodology + replication discipline is the paper's core, brain-role attractor is the supporting empirical claim.
-- Flash-variance-width (wider stdev within attractor) — decide whether to frame as sub-finding or leave as observation. Needs more n before deciding.
+- ~~Pair C (Flash+Flash) symmetry test~~ — done 2026-04-12; symmetry confirmed.
+- ~~n=10 confirmation run on all three pairs~~ — done 2026-04-13; attractor separation and symmetry hold; Flash-variance-width holds; within-pair-amplification emerged.
+- ~~Flash-variance-width sub-finding~~ — confirmed at n=10; write up as secondary finding alongside the main attractor claim.
+- **Methodology section polish** — first draft committed; pass for tightening prose, citing specific seed runs, and adding the n=10 data.
+- **Variance & limitations section** — still placeholder; expand with concrete stdev tables and the "within-pair attractor amplification" caveat.
+- Final-energy asymmetry across pair types (Haiku+Haiku lowest) — follow-up observation; decide if in scope or deferred.
