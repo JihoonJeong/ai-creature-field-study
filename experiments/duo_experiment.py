@@ -110,12 +110,94 @@ def analyze_duo(log_path, creature_names):
     return results
 
 
+def run_single(brain_specs, train_seed, test_seed, ticks, output_base, run_id):
+    """One full duo run: create creatures → train each → duo wilderness → analyze."""
+    run_dir = output_base / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+
+    creatures = []
+    for i, spec in enumerate(brain_specs):
+        provider, model = spec.split(":", 1)
+        name = f"Duo_{model.split('-')[0]}_{i+1}"
+        habitat_dir = str(run_dir / f"creatures/{name.lower()}")
+        config = make_creature(name, provider, model, habitat_dir)
+        creatures.append({"name": name, "config": config, "provider": provider, "model": model})
+
+    print(f"\n{'='*60}\n  {run_id}: PHASE 1 Solo Training (train_seed={train_seed})\n{'='*60}")
+    for c in creatures:
+        print(f"\n  Training {c['name']} ({c['model']})...")
+        train_dir = str(run_dir / f"train_{c['name'].lower()}")
+        train_creature(c["config"], train_seed, ticks, train_dir)
+        self_content = load_self(c["config"].habitat.home_dir)
+        lines = [l.strip() for l in self_content.split("\n") if l.strip() and not l.startswith("#") and not l.startswith("*") and not l.startswith("Last")]
+        print(f"  SELF.md: {lines[0][:120] if lines else '(empty)'}")
+
+    print(f"\n{'='*60}\n  {run_id}: PHASE 2 Duo Wilderness (test_seed={test_seed})\n{'='*60}")
+    orgs = []
+    for c in creatures:
+        config_reload = OrganismConfig.load(c["config"].habitat.home_dir)
+        orgs.append(config_reload.build())
+
+    test_dir = str(run_dir / "duo_test")
+    wild = Wilderness(
+        total_ticks=ticks, output_dir=test_dir, name="duo_test",
+        seed=test_seed, auto_reflect=True, auto_dream=True,
+    )
+    for org in orgs:
+        wild.join(org)
+    wild.run()
+
+    metrics = {}
+    logs = list(Path(test_dir).glob("wilderness_*.json"))
+    if logs:
+        log_path = str(logs[0])
+        generate_report(log_path, output=str(run_dir / "duo_report.md"))
+        metrics = analyze_duo(log_path, [c["name"] for c in creatures])
+        for name, m in metrics.items():
+            brain = next((c["model"] for c in creatures if c["name"] == name), "?")
+            print(f"  {name} ({brain}): speak={m['speak_rate']:.0%} defend={m['defend_rate']:.0%} "
+                  f"explore={m['explore_rate']:.0%} emotions={m['unique_emotions']} energy={m['final_energy']}")
+
+    return {
+        "run_id": run_id,
+        "train_seed": train_seed,
+        "test_seed": test_seed,
+        "brains": [c["model"] for c in creatures],
+        "metrics": metrics,
+    }
+
+
+def aggregate(runs, creature_names):
+    """Mean ± variance for key rates across runs, per creature position."""
+    import statistics
+    keys = ["speak_rate", "support_rate", "defend_rate", "explore_rate", "final_energy"]
+    agg = {}
+    for name in creature_names:
+        rows = [r["metrics"][name] for r in runs if name in r["metrics"]]
+        if not rows:
+            continue
+        agg[name] = {}
+        for k in keys:
+            vals = [row[k] for row in rows]
+            agg[name][k] = {
+                "mean": round(statistics.mean(vals), 3),
+                "stdev": round(statistics.stdev(vals), 3) if len(vals) > 1 else 0.0,
+                "n": len(vals),
+            }
+        agg[name]["emotion_union"] = sorted({e for row in rows for e in row["unique_emotions"]})
+    return agg
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--brains", default="claude_cli:haiku,gemini_cli:gemini-2.5-flash")
     parser.add_argument("--ticks", type=int, default=10)
-    parser.add_argument("--train-seed", type=int, default=42)
+    parser.add_argument(
+        "--train-seeds", default=None,
+        help="Comma-separated train seeds — one duo run per seed. If omitted, falls back to --train-seed.",
+    )
+    parser.add_argument("--train-seed", type=int, default=42, help="Single train seed (used if --train-seeds not given).")
     parser.add_argument("--test-seed", type=int, default=123)
     parser.add_argument(
         "--output-dir",
@@ -129,89 +211,39 @@ def main():
     output_base = Path(args.output_dir) if args.output_dir else Path("experiments/duo_results")
     output_base.mkdir(parents=True, exist_ok=True)
 
-    creatures = []
-    for i, spec in enumerate(brain_specs):
-        provider, model = spec.split(":", 1)
-        name = f"Duo_{model.split('-')[0]}_{i+1}"
-        habitat_dir = str(output_base / f"creatures/{name.lower()}")
-        config = make_creature(name, provider, model, habitat_dir)
-        creatures.append({"name": name, "config": config, "provider": provider, "model": model})
+    if args.train_seeds:
+        train_seeds = [int(s) for s in args.train_seeds.split(",")]
+    else:
+        train_seeds = [args.train_seed]
 
-    # Phase 1: Solo training
-    print(f"\n{'='*60}")
-    print(f"  PHASE 1: Solo Training")
-    print(f"{'='*60}")
-    for c in creatures:
-        print(f"\n  Training {c['name']} ({c['model']})...")
-        train_dir = str(output_base / f"train_{c['name'].lower()}")
-        train_creature(c["config"], args.train_seed, args.ticks, train_dir)
-        self_content = load_self(c["config"].habitat.home_dir)
-        lines = [l.strip() for l in self_content.split("\n") if l.strip() and not l.startswith("#") and not l.startswith("*") and not l.startswith("Last")]
-        print(f"  SELF.md: {lines[0][:120] if lines else '(empty)'}")
+    runs = []
+    for i, ts in enumerate(train_seeds):
+        run = run_single(brain_specs, ts, args.test_seed, args.ticks, output_base, f"r{i+1}")
+        runs.append(run)
 
-    # Phase 2: Duo wilderness
-    print(f"\n{'='*60}")
-    print(f"  PHASE 2: Duo Wilderness (seed={args.test_seed})")
-    print(f"{'='*60}")
+    creature_names = sorted({name for r in runs for name in r["metrics"]})
+    agg = aggregate(runs, creature_names) if len(runs) > 1 else {}
 
-    orgs = []
-    for c in creatures:
-        config_reload = OrganismConfig.load(c["config"].habitat.home_dir)
-        org = config_reload.build()
-        orgs.append(org)
-
-    test_dir = str(output_base / "duo_test")
-    wild = Wilderness(
-        total_ticks=args.ticks,
-        output_dir=test_dir,
-        name="duo_test",
-        seed=args.test_seed,
-        auto_reflect=True,
-        auto_dream=True,
-    )
-    for org in orgs:
-        wild.join(org)
-    wild.run()
-
-    # Analyze
-    logs = list(Path(test_dir).glob("wilderness_*.json"))
-    if logs:
-        log_path = str(logs[0])
-        report = generate_report(log_path, output=str(output_base / "duo_report.md"))
-
-        metrics = analyze_duo(log_path, [c["name"] for c in creatures])
-
-        print(f"\n{'='*60}")
-        print(f"  DUO RESULTS")
-        print(f"{'='*60}")
-        for name, m in metrics.items():
-            brain = next((c["model"] for c in creatures if c["name"] == name), "?")
-            print(f"\n  {name} ({brain}):")
-            print(f"    Actions: {m['action_counts']}")
-            print(f"    Emotions: {m['unique_emotions']}")
-            print(f"    Speak: {m['speak_rate']:.0%} | Support: {m['support_rate']:.0%} | "
-                  f"Defend: {m['defend_rate']:.0%} | Explore: {m['explore_rate']:.0%}")
-            print(f"    Energy: {m['final_energy']}")
-
-    # Check bonds
-    print(f"\n  === BONDS ===")
-    for c in creatures:
-        bonds_dir = Path(c["config"].habitat.home_dir) / "bonds"
-        if bonds_dir.exists():
-            for bond_file in bonds_dir.glob("*.md"):
-                content = bond_file.read_text(encoding="utf-8")[:200]
-                print(f"  {c['name']} → {bond_file.stem}: {content[:150]}")
-
-    # Save summary
     summary = {
-        "brains": [c["model"] for c in creatures],
-        "train_seed": args.train_seed,
+        "brains": brain_specs,
+        "train_seeds": train_seeds,
         "test_seed": args.test_seed,
         "ticks": args.ticks,
-        "metrics": metrics if logs else {},
+        "n_runs": len(runs),
+        "runs": runs,
+        "aggregate": agg,
     }
     with open(output_base / "summary.json", "w") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False, default=str)
+    print(f"\n  Summary: {output_base}/summary.json")
+    if agg:
+        print(f"\n{'='*60}\n  AGGREGATE across {len(runs)} runs\n{'='*60}")
+        for name, stats in agg.items():
+            print(f"\n  {name}:")
+            for k in ["speak_rate", "support_rate", "defend_rate", "explore_rate", "final_energy"]:
+                s = stats[k]
+                print(f"    {k}: mean={s['mean']} stdev={s['stdev']} (n={s['n']})")
+            print(f"    emotion_union: {stats['emotion_union']}")
 
 
 if __name__ == "__main__":
