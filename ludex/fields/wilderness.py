@@ -1,11 +1,8 @@
-# Diverged from ludex/ludex/fields/wilderness.py @ 3dca1d7 (2026-04-13).
-# Event sampling now uses an instance-local `random.Random(seed)` instead of
-# the global `random.seed(...)` call, so Wilderness event streams are
-# isolated from other code that touches Python's global random state
-# (e.g. ResilienceBlock retry jitter). This is load-bearing for the paper's
-# reproducibility claim — without it, event sequences could differ between
-# runs when retry counts differ. Re-sync by applying the same change in
-# Ludex, then dropping the divergence.
+# Synced with ludex/ludex/fields/wilderness.py @ 657f7fe (2026-04-13).
+# Event sampling uses an instance-local `random.Random(seed)` to isolate
+# Wilderness event streams from any code that touches Python's global
+# random state (e.g. ResilienceBlock retry jitter). Load-bearing for the
+# paper's reproducibility claim. Keep in sync with Ludex on change.
 """
 Wilderness — a living environment where creatures experience time and change.
 
