@@ -43,7 +43,7 @@ Changes from Ludex should be selectively forward-ported here.
 # Prerequisites
 python3 -m venv .venv
 source .venv/bin/activate
-pip install fastapi uvicorn httpx pyyaml
+pip install -r requirements.txt
 
 # Claude Code CLI (for Haiku experiments)
 # Already installed if you have Claude Max subscription
