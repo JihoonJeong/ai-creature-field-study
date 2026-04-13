@@ -33,7 +33,7 @@ A *field* is a deterministic event stream that a creature (or a pair) lives thro
 
 This last condition is non-trivial: the creature's resilience layer uses the global `random` module for retry jitter, and an earlier version of Wilderness seeded the global RNG. That meant an unlucky run with more LLM retries would advance global state and get a different event sequence. We moved event sampling to an instance-local RNG so the environment is genuinely isolated from its tenants' noise. Reproducibility at this level is what lets us report mean ± stdev and have it mean what we say it does.[^rng-fix]
 
-[^rng-fix]: The RNG-isolation fix post-dates the n=10 runs reported in the Findings section. Those runs were executed under the earlier global-seed implementation, where retry jitter could perturb the event stream between otherwise-identical runs. The signal observed (brain-fixed attractors with non-overlapping per-brain ranges; within-pair amplification; Flash-wider-variance) was therefore robust to retry-jitter contamination — we do not treat this as a weakness of the result, only of the implementation. A clean-RNG rerun is future work; re-running the full matrix is not expected to change the attractor conclusion but will tighten stdev bounds modestly.
+[^rng-fix]: The RNG-isolation fix post-dates the n=10 runs reported in the Findings section. Those runs were executed under the earlier global-seed implementation, where retry jitter could perturb the event stream between otherwise-identical runs. The signal observed (brain-fixed attractors with non-overlapping per-brain ranges; within-pair amplification; brain-dependent partner-sensitivity of variance) was therefore robust to retry-jitter contamination — we do not treat this as a weakness of the result, only of the implementation. A clean-RNG rerun is future work; re-running the full matrix is not expected to change the attractor conclusion but will tighten stdev bounds modestly.
 
 This event-level determinism is what makes behavioral comparison meaningful. When we compare experienced-vs-fresh or Haiku-vs-Flash, we know the creatures faced the exact same situations. Any difference comes from the creature, not the environment.
 
@@ -113,12 +113,20 @@ The methodology this paper defends is that sequence: every headline must be stat
     - Pair B: both Haikus push *deeper* into social — speak+support 73–76% (vs 50% for the Haiku in pair A). Explore drops to 9–16% (vs 33%).
     - Pair C: both Flashes push *deeper* into vigilant — defend 13–21% (vs 12% in pair A). Explore drops slightly (44–48% vs 60%).
     - In other words: the partner's role is not "fill the gap" but "do more of what I do." This is the structural consequence of brain-fixed attractors when both poles are the same; it is not a separate mechanism.
-  - **Variance width differs by brain.** Flash's stdev is ~1.5–2× wider than Haiku's on each summary metric, and this holds in both the mixed pair and the same-brain pair:
-    - Pair A Haiku stdev: speak 16, explore 18, defend 4. Pair A Flash stdev: speak 11, explore 9, defend 6.
-    - Pair B Haiku stdev (both creatures): speak 9–11, explore 10–11, defend 5–7.
-    - Pair C Flash stdev (both creatures): speak 13–15, explore 15–17, defend 12–15.
-    - Flash occupies its attractor *more loosely* than Haiku occupies its own. The width is consistent with or without a Haiku partner, so this is a brain-level property, not an interaction effect.
-  - *As of 2026-04-13, this is the only behavioral finding that survived replication across both research tracks. A separate ToM "brain-stricture" hypothesis explored in the Ludex track failed to replicate at n=10 — the v1 asymmetry collapsed into a weak trend. The methodology's replication discipline is the meta-finding; brain-fixed attractor dynamics — attractor separation, symmetric falsification, within-pair amplification, and brain-dependent variance width — is the behavioral finding that passed it.*
+  - **Partner-sensitivity of variance differs by brain.** Per-creature stdev is not a flat brain-level property; it depends on the partner. The full pattern across the three pairs:
+
+    | metric | Haiku in Pair A | Flash in Pair A | Haiku in Pair B | Flash in Pair C |
+    |---|---|---|---|---|
+    | speak | 16 | 11 | 9–11 | 13–15 |
+    | explore | 18 | 9 | 10–11 | 15–17 |
+    | support | 12 | 5 | 11–12 | 3–4 |
+    | defend | 4 | 6 | 5–7 | 12–15 |
+
+    Two regularities, neither of which is "Flash always wider":
+    - **In the mixed pair (A), Haiku is actually *wider* than Flash on speak, explore, and support.** A Flash partner pulls Haiku's behavior into a broader band; a Haiku partner pulls Flash's into a narrower one.
+    - **Both brains widen in their same-brain pair, but Flash widens much more.** Going from Pair A to its same-brain pair: Haiku explore stdev contracts (18 → 10–11); Flash explore stdev expands (9 → 15–17). Defend stdev grows for both, with Flash expanding ~2.5× (6 → 12–15) versus Haiku roughly stable (4 → 5–7).
+    - Read together: Haiku's variance is partner-insensitive — it stays in a narrow band whether the partner is another Haiku or a Flash. Flash's variance is partner-sensitive — it tightens significantly with a Haiku partner present and loosens significantly without one.
+  - *As of 2026-04-13, this is the only behavioral finding that survived replication across both research tracks. A separate ToM "brain-stricture" hypothesis explored in the Ludex track failed to replicate at n=10 — the v1 asymmetry collapsed into a weak trend. The methodology's replication discipline is the meta-finding; brain-fixed attractor dynamics — attractor separation, symmetric falsification, within-pair amplification, and brain-dependent partner-sensitivity of variance — is the behavioral finding that passed it.*
 
 ### Reported as variance observations (n=5 direction-unstable, downgraded)
 
@@ -187,8 +195,8 @@ See the Variance & limitations section above for the non-determinism caveat and 
 - ~~Pair B (haiku+haiku) pilot~~ — done 2026-04-12; result supports brain-fixed framing.
 - ~~Pairing with Ludex's brain-stricture result as second axis~~ — dropped 2026-04-12; brain-stricture did not replicate at n=10.
 - ~~Pair C (Flash+Flash) symmetry test~~ — done 2026-04-12; symmetry confirmed.
-- ~~n=10 confirmation run on all three pairs~~ — done 2026-04-13; attractor separation and symmetry hold; Flash-variance-width holds; within-pair-amplification emerged.
-- ~~Flash-variance-width sub-finding~~ — confirmed at n=10; merged into main attractor-dynamics section (2026-04-13).
+- ~~n=10 confirmation run on all three pairs~~ — done 2026-04-13; attractor separation and symmetry hold; partner-sensitivity-of-variance pattern emerged (Haiku partner-insensitive, Flash partner-sensitive); within-pair-amplification emerged.
+- ~~Flash-variance-width sub-finding~~ — corrected 2026-04-13 to "partner-sensitivity of variance"; the original "Flash always wider" framing held only for same-brain pairs and inverted in the mixed pair. Merged into main attractor-dynamics section.
 - ~~Within-pair amplification — standalone or merged?~~ — merged into attractor-dynamics as structural consequence (2026-04-13).
 - ~~Final-energy asymmetry — in scope or deferred?~~ — deferred to follow-up; one-liner in Variance & limitations (2026-04-13).
 - **Methodology section polish** — first draft committed; pass for tightening prose and citing specific n=10 seed runs.
