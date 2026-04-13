@@ -231,8 +231,10 @@ def main():
         print(f"    Run {i+1}: A={ea}  B={eb}")
 
     # Save
+    from model_versions import record_brain_versions
     summary = {
         "brain": f"{provider}:{model}",
+        "brain_versions": record_brain_versions([f"{provider}:{model}"]),
         "seeds_train": seeds,
         "seed_test": args.test_seed,
         "ticks": args.ticks,

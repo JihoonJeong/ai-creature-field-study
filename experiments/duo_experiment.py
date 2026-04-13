@@ -224,8 +224,10 @@ def main():
     creature_names = sorted({name for r in runs for name in r["metrics"]})
     agg = aggregate(runs, creature_names) if len(runs) > 1 else {}
 
+    from model_versions import record_brain_versions
     summary = {
         "brains": brain_specs,
+        "brain_versions": record_brain_versions(brain_specs),
         "train_seeds": train_seeds,
         "test_seed": args.test_seed,
         "ticks": args.ticks,
