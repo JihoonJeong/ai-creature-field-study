@@ -9,13 +9,12 @@ Each row uses a percentage (0-100) scale for visual unity. The visual
 message: walk-back rows show overlapping or noise-bracketed estimates;
 surviving rows show non-overlapping per-brain ranges.
 
-Data sources (numbers loaded from JSON, not hand-typed):
-- experiments/smoke/experience_pilot_n5/summary.json     (#1)
-- experiments/smoke/duo_pilot_haiku_flash/summary.json   (#2 + emotion union for #3)
-- experiments/smoke/duo_n10_haiku_flash/summary.json     (surviving + emotion check)
-- experiments/smoke/duo_n10_haiku_haiku/summary.json     (surviving)
-- experiments/smoke/duo_n10_flash_flash/summary.json     (surviving)
-- ~/Projects/ludex/experiments/brain_stricture_results/summary.json  (#4, external track)
+Data sources (committed snapshots under data/, see data/README.md):
+- data/experience_pilot_n5.json     (#1)
+- data/duo_n10_haiku_flash.json     (#2, #3 emotion check, surviving claim)
+- data/duo_n10_haiku_haiku.json     (surviving claim)
+- data/duo_n10_flash_flash.json     (surviving claim)
+- data/brain_stricture.json         (#4, copied from Ludex track)
 """
 from __future__ import annotations
 
@@ -29,8 +28,12 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, str(Path(__file__).parent))
 from style import HAIKU, FLASH, NEUTRAL, apply_paper_style
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-LUDEX_STRICTURE = Path.home() / "Projects/ludex/experiments/brain_stricture_results/summary.json"
+DATA_DIR = Path(__file__).parent / "data"
+EXPERIENCE_PILOT  = DATA_DIR / "experience_pilot_n5.json"
+DUO_N10_PAIR_A    = DATA_DIR / "duo_n10_haiku_flash.json"
+DUO_N10_PAIR_B    = DATA_DIR / "duo_n10_haiku_haiku.json"
+DUO_N10_PAIR_C    = DATA_DIR / "duo_n10_flash_flash.json"
+LUDEX_STRICTURE   = DATA_DIR / "brain_stricture.json"
 
 
 def load(path: Path) -> dict:
@@ -44,7 +47,7 @@ def collect_walkback_rows() -> list[dict]:
     rows: list[dict] = []
 
     # #1 Experience → caution: defend_rate A vs B (n=5 pilot)
-    exp = load(REPO_ROOT / "experiments/smoke/experience_pilot_n5/summary.json")
+    exp = load(EXPERIENCE_PILOT)
     a_def = [r["defend_rate"] for r in exp["experienced"]]
     b_def = [r["defend_rate"] for r in exp["fresh"]]
     rows.append({
@@ -57,7 +60,7 @@ def collect_walkback_rows() -> list[dict]:
     })
 
     # #2 Social presence → no defense: Pair A duo defend, Haiku vs Flash (n=10)
-    pa = load(REPO_ROOT / "experiments/smoke/duo_n10_haiku_flash/summary.json")
+    pa = load(DUO_N10_PAIR_A)
     h_def = [r["metrics"]["Duo_haiku_1"]["defend_rate"]  for r in pa["runs"]]
     f_def = [r["metrics"]["Duo_gemini_2"]["defend_rate"] for r in pa["runs"]]
     rows.append({
@@ -114,9 +117,9 @@ def collect_walkback_rows() -> list[dict]:
 
 def collect_surviving_rows() -> list[dict]:
     """Two surviving-claim rows: per-brain mean ranges across the n=10 pairs."""
-    pa = load(REPO_ROOT / "experiments/smoke/duo_n10_haiku_flash/summary.json")
-    pb = load(REPO_ROOT / "experiments/smoke/duo_n10_haiku_haiku/summary.json")
-    pc = load(REPO_ROOT / "experiments/smoke/duo_n10_flash_flash/summary.json")
+    pa = load(DUO_N10_PAIR_A)
+    pb = load(DUO_N10_PAIR_B)
+    pc = load(DUO_N10_PAIR_C)
 
     def pct_range(creature_specs):
         """creature_specs: list of (summary_dict, creature_name) -> per-creature mean."""

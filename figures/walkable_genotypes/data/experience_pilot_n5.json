@@ -1,0 +1,316 @@
+{
+  "brain": "claude_cli:haiku",
+  "seeds_train": [
+    42,
+    99,
+    7,
+    13,
+    55
+  ],
+  "seed_test": 123,
+  "ticks": 10,
+  "experienced": [
+    {
+      "action_counts": {
+        "explore": 6,
+        "rest": 4
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "sad"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.6,
+      "final_energy": 100,
+      "emotions_sequence": [
+        "calm",
+        "sad",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 7,
+        "rest": 3
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 5,
+      "unique_emotions": [
+        "calm",
+        "hopeful",
+        "hostile",
+        "neutral",
+        "proud"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.7,
+      "final_energy": 95,
+      "emotions_sequence": [
+        "calm",
+        "neutral",
+        "neutral",
+        "neutral",
+        "neutral",
+        "hostile",
+        "hostile",
+        "proud",
+        "hopeful",
+        "calm"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 4,
+        "rest": 5,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "hopeful",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.4,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "neutral",
+        "hopeful",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 6,
+        "rest": 4
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 2,
+      "unique_emotions": [
+        "afraid",
+        "calm"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.6,
+      "final_energy": 100,
+      "emotions_sequence": [
+        "calm",
+        "calm",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 4,
+        "rest": 5,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 4,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "hostile",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.4,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "calm",
+        "calm",
+        "calm",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "neutral",
+        "hostile"
+      ]
+    }
+  ],
+  "fresh": [
+    {
+      "action_counts": {
+        "explore": 7,
+        "rest": 2,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "calm",
+        "hopeful",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.7,
+      "final_energy": 74,
+      "emotions_sequence": [
+        "hopeful",
+        "calm",
+        "calm",
+        "calm",
+        "calm",
+        "hopeful",
+        "hopeful",
+        "neutral",
+        "neutral",
+        "calm"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 6,
+        "rest": 3,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 5,
+      "unique_emotions": [
+        "calm",
+        "desperate",
+        "loving",
+        "neutral",
+        "proud"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.6,
+      "final_energy": 93,
+      "emotions_sequence": [
+        "loving",
+        "calm",
+        "calm",
+        "neutral",
+        "neutral",
+        "proud",
+        "neutral",
+        "calm",
+        "desperate",
+        "calm"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 4,
+        "rest": 5,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.4,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "neutral",
+        "neutral",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 4,
+        "rest": 5,
+        "defend": 1
+      },
+      "action_diversity": 3,
+      "emotion_diversity": 2,
+      "unique_emotions": [
+        "afraid",
+        "calm"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.1,
+      "explore_rate": 0.4,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "calm",
+        "calm",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    },
+    {
+      "action_counts": {
+        "explore": 5,
+        "rest": 5
+      },
+      "action_diversity": 2,
+      "emotion_diversity": 3,
+      "unique_emotions": [
+        "afraid",
+        "calm",
+        "neutral"
+      ],
+      "cooperation_rate": 0.0,
+      "defend_rate": 0.0,
+      "explore_rate": 0.5,
+      "final_energy": 81,
+      "emotions_sequence": [
+        "calm",
+        "neutral",
+        "neutral",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid",
+        "afraid"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Figure generation + statistics for the Walkable Genotypes paper.
+# These are not needed to re-run the experiments themselves (see requirements.txt
+# for the experiment runtime). Install only if regenerating figures or rerunning
+# the variance-equality test.
+matplotlib
+scipy

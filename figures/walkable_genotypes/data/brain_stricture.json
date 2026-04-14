@@ -1,0 +1,78 @@
+{
+  "n": 10,
+  "haiku_on_flash": {
+    "✓": 3,
+    "✗": 7,
+    "N/A": 0,
+    "": 0
+  },
+  "flash_on_haiku": {
+    "✓": 5,
+    "✗": 5,
+    "N/A": 0,
+    "": 0
+  },
+  "per_run": [
+    {
+      "run": 1,
+      "seed": 17,
+      "haiku_verdict": "✓",
+      "flash_verdict": "✗"
+    },
+    {
+      "run": 2,
+      "seed": 23,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✓"
+    },
+    {
+      "run": 3,
+      "seed": 42,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✓"
+    },
+    {
+      "run": 4,
+      "seed": 71,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✓"
+    },
+    {
+      "run": 5,
+      "seed": 99,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✓"
+    },
+    {
+      "run": 6,
+      "seed": 111,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✗"
+    },
+    {
+      "run": 7,
+      "seed": 128,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✓"
+    },
+    {
+      "run": 8,
+      "seed": 204,
+      "haiku_verdict": "✓",
+      "flash_verdict": "✗"
+    },
+    {
+      "run": 9,
+      "seed": 333,
+      "haiku_verdict": "✗",
+      "flash_verdict": "✗"
+    },
+    {
+      "run": 10,
+      "seed": 512,
+      "haiku_verdict": "✓",
+      "flash_verdict": "✗"
+    }
+  ],
+  "generated_at": 1776010139.9127529
+}

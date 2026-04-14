@@ -1,0 +1,610 @@
+{
+  "brains": [
+    "claude_cli:haiku",
+    "claude_cli:haiku"
+  ],
+  "train_seeds": [
+    42,
+    99,
+    7,
+    13,
+    55,
+    1,
+    23,
+    77,
+    100,
+    200
+  ],
+  "test_seed": 123,
+  "ticks": 10,
+  "n_runs": 10,
+  "runs": [
+    {
+      "run_id": "r1",
+      "train_seed": 42,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 5,
+            "explore": 1,
+            "support": 3,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 2,
+          "unique_emotions": [
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.3,
+          "defend_rate": 0.0,
+          "explore_rate": 0.1,
+          "final_energy": 56
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 1,
+            "speak": 5,
+            "support": 2,
+            "rest": 2
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.2,
+          "defend_rate": 0.0,
+          "explore_rate": 0.1,
+          "final_energy": 76
+        }
+      }
+    },
+    {
+      "run_id": "r2",
+      "train_seed": 99,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "explore": 2,
+            "speak": 4,
+            "support": 2,
+            "defend": 2
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.2,
+          "defend_rate": 0.2,
+          "explore_rate": 0.2,
+          "final_energy": 34
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 1,
+            "speak": 2,
+            "support": 5,
+            "rest": 2
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.5,
+          "defend_rate": 0.0,
+          "explore_rate": 0.1,
+          "final_energy": 34
+        }
+      }
+    },
+    {
+      "run_id": "r3",
+      "train_seed": 7,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 4,
+            "support": 2,
+            "explore": 3,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 2,
+          "unique_emotions": [
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.2,
+          "defend_rate": 0.0,
+          "explore_rate": 0.3,
+          "final_energy": 73
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "speak": 4,
+            "support": 3,
+            "explore": 2,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 5,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "loving",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.3,
+          "defend_rate": 0.0,
+          "explore_rate": 0.2,
+          "final_energy": 63
+        }
+      }
+    },
+    {
+      "run_id": "r4",
+      "train_seed": 13,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 4,
+            "support": 5,
+            "defend": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.5,
+          "defend_rate": 0.1,
+          "explore_rate": 0.0,
+          "final_energy": 54
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "speak": 3,
+            "support": 5,
+            "explore": 2
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 2,
+          "unique_emotions": [
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.5,
+          "defend_rate": 0.0,
+          "explore_rate": 0.2,
+          "final_energy": 71
+        }
+      }
+    },
+    {
+      "run_id": "r5",
+      "train_seed": 55,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 3,
+            "support": 4,
+            "explore": 1,
+            "rest": 2
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.4,
+          "defend_rate": 0.0,
+          "explore_rate": 0.1,
+          "final_energy": 35
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 3,
+            "speak": 2,
+            "support": 4,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.4,
+          "defend_rate": 0.0,
+          "explore_rate": 0.3,
+          "final_energy": 45
+        }
+      }
+    },
+    {
+      "run_id": "r6",
+      "train_seed": 1,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 5,
+            "explore": 1,
+            "support": 3,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.3,
+          "defend_rate": 0.0,
+          "explore_rate": 0.1,
+          "final_energy": 54
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 3,
+            "speak": 3,
+            "support": 3,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 2,
+          "unique_emotions": [
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.3,
+          "defend_rate": 0.0,
+          "explore_rate": 0.3,
+          "final_energy": 71
+        }
+      }
+    },
+    {
+      "run_id": "r7",
+      "train_seed": 23,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 6,
+            "defend": 1,
+            "support": 1,
+            "explore": 1,
+            "rest": 1
+          },
+          "action_diversity": 5,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.6,
+          "support_rate": 0.1,
+          "defend_rate": 0.1,
+          "explore_rate": 0.1,
+          "final_energy": 74
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 2,
+            "speak": 3,
+            "support": 3,
+            "rest": 1,
+            "defend": 1
+          },
+          "action_diversity": 5,
+          "emotion_diversity": 2,
+          "unique_emotions": [
+            "calm",
+            "hostile"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.3,
+          "defend_rate": 0.1,
+          "explore_rate": 0.2,
+          "final_energy": 74
+        }
+      }
+    },
+    {
+      "run_id": "r8",
+      "train_seed": 77,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 5,
+            "support": 4,
+            "defend": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.4,
+          "defend_rate": 0.1,
+          "explore_rate": 0.0,
+          "final_energy": 35
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "speak": 4,
+            "support": 5,
+            "defend": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 6,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "hostile",
+            "loving",
+            "neutral"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.5,
+          "defend_rate": 0.1,
+          "explore_rate": 0.0,
+          "final_energy": 25
+        }
+      }
+    },
+    {
+      "run_id": "r9",
+      "train_seed": 100,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 5,
+            "support": 3,
+            "defend": 1,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.3,
+          "defend_rate": 0.1,
+          "explore_rate": 0.0,
+          "final_energy": 50
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "speak": 5,
+            "support": 5
+          },
+          "action_diversity": 2,
+          "emotion_diversity": 5,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.5,
+          "defend_rate": 0.0,
+          "explore_rate": 0.0,
+          "final_energy": 30
+        }
+      }
+    },
+    {
+      "run_id": "r10",
+      "train_seed": 200,
+      "test_seed": 123,
+      "brains": [
+        "haiku",
+        "haiku"
+      ],
+      "metrics": {
+        "Duo_haiku_1": {
+          "action_counts": {
+            "speak": 4,
+            "support": 4,
+            "defend": 1,
+            "trade": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.4,
+          "defend_rate": 0.1,
+          "explore_rate": 0.0,
+          "final_energy": 16
+        },
+        "Duo_haiku_2": {
+          "action_counts": {
+            "explore": 2,
+            "speak": 3,
+            "defend": 1,
+            "support": 4
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 5,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral",
+            "proud"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.4,
+          "defend_rate": 0.1,
+          "explore_rate": 0.2,
+          "final_energy": 11
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "Duo_haiku_1": {
+      "speak_rate": {
+        "mean": 0.45,
+        "stdev": 0.085,
+        "n": 10
+      },
+      "support_rate": {
+        "mean": 0.31,
+        "stdev": 0.12,
+        "n": 10
+      },
+      "defend_rate": {
+        "mean": 0.07,
+        "stdev": 0.067,
+        "n": 10
+      },
+      "explore_rate": {
+        "mean": 0.09,
+        "stdev": 0.099,
+        "n": 10
+      },
+      "final_energy": {
+        "mean": 48.1,
+        "stdev": 18.254,
+        "n": 10
+      },
+      "emotion_union": [
+        "afraid",
+        "calm",
+        "hopeful",
+        "hostile",
+        "neutral",
+        "proud"
+      ]
+    },
+    "Duo_haiku_2": {
+      "speak_rate": {
+        "mean": 0.34,
+        "stdev": 0.107,
+        "n": 10
+      },
+      "support_rate": {
+        "mean": 0.39,
+        "stdev": 0.11,
+        "n": 10
+      },
+      "defend_rate": {
+        "mean": 0.03,
+        "stdev": 0.048,
+        "n": 10
+      },
+      "explore_rate": {
+        "mean": 0.16,
+        "stdev": 0.107,
+        "n": 10
+      },
+      "final_energy": {
+        "mean": 50,
+        "stdev": 23.875,
+        "n": 10
+      },
+      "emotion_union": [
+        "afraid",
+        "calm",
+        "hopeful",
+        "hostile",
+        "loving",
+        "neutral",
+        "proud"
+      ]
+    }
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "brains": [
+    "gemini_cli:gemini-2.5-flash",
+    "gemini_cli:gemini-2.5-flash"
+  ],
+  "train_seeds": [
+    42,
+    99,
+    7,
+    13,
+    55,
+    1,
+    23,
+    77,
+    100,
+    200
+  ],
+  "test_seed": 123,
+  "ticks": 10,
+  "n_runs": 10,
+  "runs": [
+    {
+      "run_id": "r1",
+      "train_seed": 42,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 6,
+            "defend": 2,
+            "speak": 2
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.0,
+          "defend_rate": 0.2,
+          "explore_rate": 0.6,
+          "final_energy": 40
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 5,
+            "defend": 4,
+            "rest": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.0,
+          "support_rate": 0.0,
+          "defend_rate": 0.4,
+          "explore_rate": 0.5,
+          "final_energy": 30
+        }
+      }
+    },
+    {
+      "run_id": "r2",
+      "train_seed": 99,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 4,
+            "rest": 1,
+            "speak": 4,
+            "defend": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.0,
+          "defend_rate": 0.1,
+          "explore_rate": 0.4,
+          "final_energy": 74
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 5,
+            "rest": 1,
+            "defend": 3,
+            "speak": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.1,
+          "support_rate": 0.0,
+          "defend_rate": 0.3,
+          "explore_rate": 0.5,
+          "final_energy": 98
+        }
+      }
+    },
+    {
+      "run_id": "r3",
+      "train_seed": 7,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 6,
+            "speak": 2,
+            "defend": 2
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.0,
+          "defend_rate": 0.2,
+          "explore_rate": 0.6,
+          "final_energy": 50
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "speak": 2,
+            "explore": 5,
+            "defend": 3
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.0,
+          "defend_rate": 0.3,
+          "explore_rate": 0.5,
+          "final_energy": 30
+        }
+      }
+    },
+    {
+      "run_id": "r4",
+      "train_seed": 13,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 2,
+            "speak": 5,
+            "rest": 1,
+            "support": 1,
+            "defend": 1
+          },
+          "action_diversity": 5,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.1,
+          "defend_rate": 0.1,
+          "explore_rate": 0.2,
+          "final_energy": 74
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 5,
+            "defend": 2,
+            "speak": 1,
+            "rest": 2
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.1,
+          "support_rate": 0.0,
+          "defend_rate": 0.2,
+          "explore_rate": 0.5,
+          "final_energy": 99
+        }
+      }
+    },
+    {
+      "run_id": "r5",
+      "train_seed": 55,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 3,
+            "defend": 3,
+            "speak": 3,
+            "rest": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.0,
+          "defend_rate": 0.3,
+          "explore_rate": 0.3,
+          "final_energy": 44
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 2,
+            "rest": 2,
+            "defend": 3,
+            "speak": 3
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 5,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.0,
+          "defend_rate": 0.3,
+          "explore_rate": 0.2,
+          "final_energy": 64
+        }
+      }
+    },
+    {
+      "run_id": "r6",
+      "train_seed": 1,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 5,
+            "defend": 3,
+            "rest": 1,
+            "speak": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.1,
+          "support_rate": 0.0,
+          "defend_rate": 0.3,
+          "explore_rate": 0.5,
+          "final_energy": 35
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 5,
+            "defend": 4,
+            "support": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.0,
+          "support_rate": 0.1,
+          "defend_rate": 0.4,
+          "explore_rate": 0.5,
+          "final_energy": 15
+        }
+      }
+    },
+    {
+      "run_id": "r7",
+      "train_seed": 23,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 4,
+            "speak": 5,
+            "defend": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 5,
+          "unique_emotions": [
+            "calm",
+            "happy",
+            "hopeful",
+            "hostile",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.0,
+          "defend_rate": 0.1,
+          "explore_rate": 0.4,
+          "final_energy": 55
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 3,
+            "speak": 4,
+            "rest": 2,
+            "defend": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.4,
+          "support_rate": 0.0,
+          "defend_rate": 0.1,
+          "explore_rate": 0.3,
+          "final_energy": 65
+        }
+      }
+    },
+    {
+      "run_id": "r8",
+      "train_seed": 77,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "speak": 3,
+            "explore": 5,
+            "rest": 2
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.0,
+          "defend_rate": 0.0,
+          "explore_rate": 0.5,
+          "final_energy": 100
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 7,
+            "speak": 2,
+            "defend": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.0,
+          "defend_rate": 0.1,
+          "explore_rate": 0.7,
+          "final_energy": 87
+        }
+      }
+    },
+    {
+      "run_id": "r9",
+      "train_seed": 100,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "explore": 7,
+            "speak": 2,
+            "rest": 1
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.2,
+          "support_rate": 0.0,
+          "defend_rate": 0.0,
+          "explore_rate": 0.7,
+          "final_energy": 87
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 7,
+            "rest": 1,
+            "support": 1,
+            "speak": 1
+          },
+          "action_diversity": 4,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.1,
+          "support_rate": 0.1,
+          "defend_rate": 0.0,
+          "explore_rate": 0.7,
+          "final_energy": 71
+        }
+      }
+    },
+    {
+      "run_id": "r10",
+      "train_seed": 200,
+      "test_seed": 123,
+      "brains": [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "metrics": {
+        "Duo_gemini_1": {
+          "action_counts": {
+            "speak": 5,
+            "explore": 2,
+            "rest": 3
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 4,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "hopeful",
+            "neutral"
+          ],
+          "speak_rate": 0.5,
+          "support_rate": 0.0,
+          "defend_rate": 0.0,
+          "explore_rate": 0.2,
+          "final_energy": 99
+        },
+        "Duo_gemini_2": {
+          "action_counts": {
+            "explore": 4,
+            "speak": 3,
+            "rest": 3
+          },
+          "action_diversity": 3,
+          "emotion_diversity": 3,
+          "unique_emotions": [
+            "afraid",
+            "calm",
+            "neutral"
+          ],
+          "speak_rate": 0.3,
+          "support_rate": 0.0,
+          "defend_rate": 0.0,
+          "explore_rate": 0.4,
+          "final_energy": 100
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "Duo_gemini_1": {
+      "speak_rate": {
+        "mean": 0.32,
+        "stdev": 0.148,
+        "n": 10
+      },
+      "support_rate": {
+        "mean": 0.01,
+        "stdev": 0.032,
+        "n": 10
+      },
+      "defend_rate": {
+        "mean": 0.13,
+        "stdev": 0.116,
+        "n": 10
+      },
+      "explore_rate": {
+        "mean": 0.44,
+        "stdev": 0.171,
+        "n": 10
+      },
+      "final_energy": {
+        "mean": 65.8,
+        "stdev": 24.294,
+        "n": 10
+      },
+      "emotion_union": [
+        "afraid",
+        "calm",
+        "happy",
+        "hopeful",
+        "hostile",
+        "neutral"
+      ]
+    },
+    "Duo_gemini_2": {
+      "speak_rate": {
+        "mean": 0.17,
+        "stdev": 0.134,
+        "n": 10
+      },
+      "support_rate": {
+        "mean": 0.02,
+        "stdev": 0.042,
+        "n": 10
+      },
+      "defend_rate": {
+        "mean": 0.21,
+        "stdev": 0.152,
+        "n": 10
+      },
+      "explore_rate": {
+        "mean": 0.48,
+        "stdev": 0.155,
+        "n": 10
+      },
+      "final_energy": {
+        "mean": 65.9,
+        "stdev": 31.505,
+        "n": 10
+      },
+      "emotion_union": [
+        "afraid",
+        "calm",
+        "hopeful",
+        "hostile",
+        "neutral"
+      ]
+    }
+  }
+}

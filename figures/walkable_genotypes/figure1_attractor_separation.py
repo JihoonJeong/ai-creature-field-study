@@ -3,11 +3,11 @@
 Visualizes brain-fixed behavioral attractors as non-overlapping regions on the
 (speak+support, explore) action-space plane, n=10 × 3 pair conditions.
 
-Data sources (per-run metrics, loaded directly from summary.json — do not
-hand-copy numbers):
-- experiments/smoke/duo_n10_haiku_flash/summary.json   (Pair A)
-- experiments/smoke/duo_n10_haiku_haiku/summary.json   (Pair B)
-- experiments/smoke/duo_n10_flash_flash/summary.json   (Pair C)
+Data sources (committed snapshots under figures/walkable_genotypes/data/,
+copied verbatim from the live experiments/smoke/ tree — see data/README.md):
+- data/duo_n10_haiku_flash.json   (Pair A)
+- data/duo_n10_haiku_haiku.json   (Pair B)
+- data/duo_n10_flash_flash.json   (Pair C)
 
 Color encodes brain (Haiku teal / Flash orange); marker shape encodes pair
 condition (○ Pair A, △ Pair B, ▽ Pair C). Larger filled markers indicate the
@@ -31,11 +31,11 @@ from style import (
     apply_paper_style,
 )
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_DIR = Path(__file__).parent / "data"
 DATA = {
-    "A": REPO_ROOT / "experiments/smoke/duo_n10_haiku_flash/summary.json",
-    "B": REPO_ROOT / "experiments/smoke/duo_n10_haiku_haiku/summary.json",
-    "C": REPO_ROOT / "experiments/smoke/duo_n10_flash_flash/summary.json",
+    "A": DATA_DIR / "duo_n10_haiku_flash.json",
+    "B": DATA_DIR / "duo_n10_haiku_haiku.json",
+    "C": DATA_DIR / "duo_n10_flash_flash.json",
 }
 
 
@@ -99,10 +99,15 @@ def main() -> Path:
         plt.Line2D([], [], marker=MARKER_PAIR_B, linestyle="", markersize=9, markerfacecolor="white", markeredgecolor="black", label="Pair B · Haiku+Haiku"),
         plt.Line2D([], [], marker=MARKER_PAIR_C, linestyle="", markersize=9, markerfacecolor="white", markeredgecolor="black", label="Pair C · Flash+Flash"),
     ]
+    # Legend placement: Brain in upper-right (its corner is empty), Pair
+    # condition in upper-left above the Flash cluster (which tops out near
+    # explore=70%). The previous lower-right placement occluded the Pair B
+    # Haiku cluster (speak+support 73-76%, explore 9-16%) — keep both legends
+    # in the upper half so the bottom-right amplification region stays visible.
     leg1 = ax.legend(handles=brain_handles, loc="upper right", title="Brain",
                      frameon=True, framealpha=0.95)
     ax.add_artist(leg1)
-    ax.legend(handles=pair_handles, loc="lower right", title="Pair condition",
+    ax.legend(handles=pair_handles, loc="upper left", title="Pair condition",
               frameon=True, framealpha=0.95)
 
     out = Path(__file__).parent / "figure1.png"
