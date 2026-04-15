@@ -3,7 +3,7 @@
 > **Cross-environment validation of the Four Shell Model in AI Creatures.**
 > Companion repository to a paper in the Model Medicine series.
 
-[**Project page →**](https://jihoonjeong.github.io/ai-creature-field-study/) · [**Read the paper draft**](docs/paper-draft.md) · [**Model Medicine**](https://jihoonjeong.github.io/model-medicine/)
+[**Project page →**](https://jihoonjeong.github.io/ai-creature-field-study/) · [**Paper (PDF)**](docs/assets/walkable_genotypes.pdf) · [**Working draft (Markdown)**](docs/paper-draft.md) · [**Model Medicine**](https://jihoonjeong.github.io/model-medicine/)
 
 ---
 
@@ -15,7 +15,8 @@ Just as important is what *did not* survive. Five behavioral observations made i
 
 ## Quick links
 
-- **Paper draft (Markdown):** [`docs/paper-draft.md`](docs/paper-draft.md)
+- **Pre-arXiv draft (PDF):** [`docs/assets/walkable_genotypes.pdf`](docs/assets/walkable_genotypes.pdf)
+- **Working draft (Markdown):** [`docs/paper-draft.md`](docs/paper-draft.md)
 - **Project page:** https://jihoonjeong.github.io/ai-creature-field-study/
 - **Figures:** [`figures/walkable_genotypes/`](figures/walkable_genotypes/) — both Tier-A figures with regenerable scripts and a committed data snapshot
 - **Experiment scripts:** [`experiments/`](experiments/)

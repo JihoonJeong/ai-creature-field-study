@@ -11,6 +11,7 @@
     "label": "Model Medicine 시리즈 · 2026년 4월",
     "tagline": "AI Creature를 통한 Four Shell Model의 환경 간 검증",
     "summary": "다섯 가지 행동 가설로 시작했습니다. 같은 seed로 n=5 재현했을 때 네 가지는 자기 표본 표준편차 안으로 무너졌습니다. 한 가지는 n=10에서 점점 더 엄격한 세 단계의 반증 시험을 통과했고 — 다른 연구가 고스트레스 환경에서 보고한 Core 속성 예측을, 전혀 다른 환경에서 독립적으로 재현했습니다. 살아남은 finding을 노이즈에서 가려낸 방법론이 이 논문의 핵심입니다.",
+    "btn_pdf": "PDF 다운로드",
     "btn_findings": "발견 보기",
     "btn_github": "GitHub에서 보기"
   },
@@ -47,9 +48,13 @@
   "resources": {
     "title": "자료",
 
-    "paper_label": "논문 초안",
-    "paper_title": "전체 Markdown 초안",
-    "paper_desc": "방법론, n=10 × 3 pair 표가 들어간 findings, walk-back 감사, variance & limitations, 재현 가이드 — arXiv 패키징 직전의 작업본 그대로.",
+    "pdf_label": "논문 · PDF",
+    "pdf_title": "Pre-arXiv 초안 (PDF)",
+    "pdf_desc": "9개 섹션 전체, n=10 × 3 pair 표, 두 Tier-A figure, walk-back 감사, Levene test 결과, 전체 재현 가이드를 담은 frozen 타이프셋 스냅샷. arXiv 제출 전 생성. 라이브 작업본은 아래 Markdown 링크.",
+
+    "paper_label": "논문 · Markdown",
+    "paper_title": "작업 초안",
+    "paper_desc": "PDF와 동일한 내용을 살아있는 Markdown 형태로 — operator들이 revision 사이에 iterate하는 본문 그대로. 브라우저에서 읽거나, 향후 버전과 diff하거나, 특정 단락을 line number로 인용하고 싶을 때 이쪽.",
 
     "code_label": "코드와 데이터",
     "code_title": "GitHub 저장소",
