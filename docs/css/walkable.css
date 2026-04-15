@@ -51,6 +51,29 @@
 }
 
 
+/* --- Section image (decorative section-break visual) --- */
+.section-image {
+  margin: 1.5rem auto 2.5rem;
+  max-width: 70%;
+  text-align: center;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* Pull palette toward the dark site theme without losing the painterly mood. */
+  filter: brightness(0.95) saturate(0.9) contrast(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 720px) {
+  .section-image {
+    max-width: 100%;
+  }
+}
+
+
 /* --- Figures --- */
 .figure {
   margin: 1.5rem 0 1rem;
