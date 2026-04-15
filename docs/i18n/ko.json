@@ -14,7 +14,7 @@
 
     "creature_label": "Creature (생물)",
     "creature_title": "조립된 유기체 — 챗봇이 아닙니다",
-    "creature_desc": "AI Creature는 장기(organ) 같은 모듈들로 조립된 작은 프로그램입니다 — 기억, 감정, 면역 반응, 그리고 언어 모델과 대화하는 엔진. 각 creature는 디스크에 habitat 폴더를 가지며, 그 안에 정체성, 기억, 다른 creature와의 유대가 세션 사이에 유지됩니다. 우리는 creature의 자기 서술(SELF.md)을 손으로 쓰지 않습니다 — creature가 매 세션 후 직접 회상하며 자신의 SELF.md를 씁니다.",
+    "creature_desc": "AI Creature는 장기(organ) 같은 모듈들로 조립된 작은 프로그램입니다 — 기억, 감정, 면역 반응, 그리고 언어 모델과 대화하는 엔진. 각 creature는 디스크에 habitat 폴더를 가지며, 그 안에 정체성, 기억, 다른 creature와의 유대가 세션 사이에 유지됩니다. 우리는 creature의 자기 서술(SELF.md)을 손으로 쓰지 않습니다 — creature가 매 세션 후 직접 회상하며 자신의 SELF.md를 씁니다. 어떻게 creature가 조립되는지, 각 모듈이 어떤 장기에 대응하는지, 이 계보가 다른 AI agent들 사이에서 어디에 위치하는지에 대한 더 깊은 아키텍처 설명은 <a href=\"https://jihoonjeong.github.io/comparative-anatomy/\" target=\"_blank\" rel=\"noopener\">Comparative Anatomy of AI Agent Systems</a>를 참조하세요.",
 
     "brain_label": "Brain (뇌)",
     "brain_title": "서로 다른 LLM = 서로 다른 마음",
@@ -81,6 +81,10 @@
     "series_label": "시리즈 컨텍스트",
     "series_title": "Model Medicine",
     "series_desc": "이 논문은 Four Shell Model을 도입하고 네 개의 LLM Core를 고스트레스 조건에서 특성화한 Jeong (2026)의 후속작입니다. Walkable Genotypes는 그 Core 특성화가 중간-자극 환경으로 이전되는지를 묻습니다.",
+
+    "anatomy_label": "아키텍처 sibling",
+    "anatomy_title": "Comparative Anatomy",
+    "anatomy_desc": "Model Medicine 시리즈의 동반 논문으로, 두 개의 AI agent 시스템 — Claude Code와 OpenClaw — 을 생물 해부학 렌즈로 해부하고, 11개의 소프트웨어 subsystem을 장기 등가물에 매핑하며, AI agent의 계통수(2022–2026)를 구성합니다. 이 논문이 의존하는 Ludex creature 아키텍처가 거기에 전체적으로 기술되어 있습니다.",
 
     "cite_title": "인용"
   },
