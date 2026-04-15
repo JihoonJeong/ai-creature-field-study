@@ -1,10 +1,28 @@
 {
   "nav": {
+    "concepts": "개념",
     "findings": "발견",
     "methodology": "방법론",
     "reproduce": "재현",
     "resources": "자료",
     "about": "소개"
+  },
+
+  "concepts": {
+    "title": "이 글을 읽기 위한 세 개념",
+    "subtitle": "이 논문을 따라가는 데 필요한 것은 세 개념뿐입니다. AI 배경 지식은 필요하지 않습니다.",
+
+    "creature_label": "Creature (생물)",
+    "creature_title": "조립된 유기체 — 챗봇이 아닙니다",
+    "creature_desc": "AI Creature는 장기(organ) 같은 모듈들로 조립된 작은 프로그램입니다 — 기억, 감정, 면역 반응, 그리고 언어 모델과 대화하는 엔진. 각 creature는 디스크에 habitat 폴더를 가지며, 그 안에 정체성, 기억, 다른 creature와의 유대가 세션 사이에 유지됩니다. 우리는 creature의 자기 서술(SELF.md)을 손으로 쓰지 않습니다 — creature가 매 세션 후 직접 회상하며 자신의 SELF.md를 씁니다.",
+
+    "brain_label": "Brain (뇌)",
+    "brain_title": "서로 다른 LLM = 서로 다른 마음",
+    "brain_desc": "Brain은 creature의 인지를 담당하는 언어 모델입니다. 이 논문에서는 두 가지를 시험합니다 — Claude Haiku와 Gemini 2.5 Flash. 로컬 CLI 구독으로 호출하며, 유료 API 호출은 발생하지 않습니다. Creature 아키텍처는 둘 다 동일하고, brain만 다릅니다. 따라서 같은 상황에서 두 creature가 다르게 행동하면, 원인은 brain 자체임을 알 수 있습니다.",
+
+    "field_label": "Field (필드)",
+    "field_title": "재현 가능한 관찰 환경",
+    "field_desc": "Field는 creature가 정해진 tick 수만큼 살아내는 결정적 환경입니다. 이 논문에서 사용한 Wilderness field는 평온한 날, 폭풍, 고립, 근처에 다른 creature가 있음 같은 자극을 제시하고, creature에게 행동 하나를 고르게 합니다 — rest(쉼), explore(탐색), defend(방어), speak(말함), support(돕기), trade(교환). 이벤트는 seed로 결정되므로, 같은 seed의 두 run은 동일한 이벤트 시퀀스를 만듭니다. 그래서 다른 creature들의 동일 상황 반응을 비교할 수 있습니다."
   },
 
   "hero": {

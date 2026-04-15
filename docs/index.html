@@ -44,6 +44,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#concepts" data-i18n="nav.concepts">Concepts</a></li>
         <li><a href="#findings" data-i18n="nav.findings">Findings</a></li>
         <li><a href="#methodology" data-i18n="nav.methodology">Methodology</a></li>
         <li><a href="#reproduce" data-i18n="nav.reproduce">Reproduce</a></li>
@@ -72,6 +73,42 @@
       </div>
     </div>
   </header>
+
+  <!-- Concepts (intro for general readers) -->
+  <section class="section section-alt" id="concepts">
+    <div class="container">
+      <h2 class="section-title" data-i18n="concepts.title">What you're looking at</h2>
+      <p class="section-subtitle" data-i18n="concepts.subtitle">
+        Three concepts make this paper readable. None of them require an AI background.
+      </p>
+
+      <div class="resources-grid">
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="concepts.creature_label">Creature</p>
+          <h3 class="resource-title" data-i18n="concepts.creature_title">An assembled organism, not a chatbot</h3>
+          <p class="resource-desc" data-i18n="concepts.creature_desc">
+            An AI Creature is a small program assembled from organ-like modules — a memory, an emotion module, an immune response, an engine that talks to a language model. Each creature has a habitat folder on disk where its identity, memories, and bonds with other creatures persist between sessions. We don't hand-write the creature's self-description; the creature writes its own <code>SELF.md</code> after each session by reflecting on what just happened.
+          </p>
+        </div>
+
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="concepts.brain_label">Brain</p>
+          <h3 class="resource-title" data-i18n="concepts.brain_title">Different LLMs as different minds</h3>
+          <p class="resource-desc" data-i18n="concepts.brain_desc">
+            The brain is the language model that powers a creature's cognition. In this paper we test two: Claude Haiku and Gemini 2.5 Flash. We talk to them through local CLI subscriptions — no paid API calls. The creature architecture is identical across the two; only the brain differs. So when two creatures behave differently in the same situation, we know the cause is the brain itself.
+          </p>
+        </div>
+
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="concepts.field_label">Field</p>
+          <h3 class="resource-title" data-i18n="concepts.field_title">A reproducible observation environment</h3>
+          <p class="resource-desc" data-i18n="concepts.field_desc">
+            A field is a deterministic environment a creature lives through for a fixed number of ticks. The Wilderness field used here presents stimuli like a calm day, a storm, isolation, a nearby creature — then asks the creature to choose an action: rest, explore, defend, speak, support, or trade. Because events are seeded, two runs at the same seed produce identical event sequences. That's how we can compare different creatures' responses to the same situations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Findings -->
   <section class="section" id="findings">
