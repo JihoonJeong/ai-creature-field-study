@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "findings": "발견",
+    "methodology": "방법론",
+    "reproduce": "재현",
+    "resources": "자료",
+    "about": "소개"
+  },
+
+  "hero": {
+    "label": "Model Medicine 시리즈 · 2026년 4월",
+    "tagline": "AI Creature를 통한 Four Shell Model의 환경 간 검증",
+    "summary": "다섯 가지 행동 가설로 시작했습니다. 같은 seed로 n=5 재현했을 때 네 가지는 자기 표본 표준편차 안으로 무너졌습니다. 한 가지는 n=10에서 점점 더 엄격한 세 단계의 반증 시험을 통과했고 — 다른 연구가 고스트레스 환경에서 보고한 Core 속성 예측을, 전혀 다른 환경에서 독립적으로 재현했습니다. 살아남은 finding을 노이즈에서 가려낸 방법론이 이 논문의 핵심입니다.",
+    "btn_findings": "발견 보기",
+    "btn_github": "GitHub에서 보기"
+  },
+
+  "findings": {
+    "title": "무엇이 살아남고, 무엇이 사라졌나",
+    "subtitle": "두 figure가 경험적 기여와 방법론적 기여를 각각 짊어집니다.",
+
+    "fig1_label": "Figure 1 · 경험적 앵커",
+    "fig1_title": "뇌 고정 행동 attractor",
+    "fig1_caption": "각 점은 한 creature가 한 run에서 보인 (speak+support 비율, explore 비율) 좌표 (총 70점: 7 creature-condition × 10 seed). 색은 brain — Haiku 청록, Flash 주황. 마커 모양은 pair 조건: Haiku+Flash (○), Haiku+Haiku (△), Flash+Flash (▽). 검은 테두리의 큰 마커는 cluster별 평균. n=10에서 두 brain의 cluster는 어느 축에서도 겹치지 않으며, pair 조건과 무관합니다. 같은-brain 쌍은 각 brain을 자신의 attractor 안쪽으로 더 깊이 밀어 넣습니다 — 오른쪽 아래의 Haiku 삼각형, 왼쪽 위의 Flash 삼각형이 그 amplification을 보여줍니다.",
+
+    "fig2_label": "Figure 2 · 방법론적 척추",
+    "fig2_title": "Walk-back 감사",
+    "fig2_caption": "위 네 행 (회색, ±1σ): 재현 시 무너진 네 개의 초기 행동 headline. 각각의 효과 추정치가 자기 표본 표준편차 안에 들어가며 — bar들이 겹치거나 노이즈 바닥에 머무릅니다. 점선 분리선이 discipline 경계입니다. 아래 두 행 (컬러): 살아남은 brain-fixed-attractor claim. Haiku (청록)와 Flash (주황)의 creature별 평균 범위를 speak+support와 explore 두 메트릭에서 표시 — 두 메트릭 모두 brain 간 겹침이 없습니다. #4행은 Model Medicine track의 별도 연구에서 나온 것으로, 같은 이유로 실패했기 때문에 (원래의 비대칭성이 n=10에서 무너졌기 때문에) 함께 표시했습니다."
+  },
+
+  "methodology": {
+    "title": "Replication discipline 이라는 척추",
+    "subtitle": "이 논문의 핵심은 살아남은 발견이 아닙니다. 그 발견을 만들어 낸 리듬입니다.",
+
+    "p1": "초기에 다섯 개의 작은 행동 관찰이 작성물에 들어갔습니다. 각각 1~3회의 run을 근거로 한 것이었고, 흥미로운 무언가를 가리키는 듯했습니다 — 경험은 creature를 신중하게 만든다, 사회적 존재는 방어 행동을 없앤다, 듀오에서 감정이 'loving' 쪽으로 뒤집힌다, 별도의 Model Medicine track에서는 한 brain이 관대하고 다른 brain은 엄격하다는 보고가 있었다.",
+    "p2": "동일한 seed로 n=5에서, creature별 평균 ± 표준편차 전체를 보고하며 다시 돌렸습니다. 다섯 중 네 개가 무너졌습니다. 무너진 모든 경우에서 효과 추정치는 자신의 표본 표준편차 안에 들어 있었습니다 — 원래의 \"발견\"은 노이즈 안의 셔플을 headline으로 읽은 것이었습니다.",
+    "p3": "남은 한 가지 — 가설로 제시된 것이 아니라 네 개 중 하나가 절반 실패한 이유를 재분석하는 과정에서 떠오른 것 — 은 각 Brain이 듀오에서 별개의 행동 attractor를 차지한다는 것이었습니다: Haiku는 사회적/지지적 cluster, Flash는 탐색적/경계적 cluster. 그 주장은 점점 더 엄격한 세 단계 시험을 거쳤습니다: 원래의 혼합 쌍에서 n=5, 그 다음 pair-dynamics 설명에 대한 반증으로 Haiku+Haiku 동종 쌍, 다음으로 대칭적인 Flash+Flash, 마지막으로 세 쌍 모두에서 n=10. 매 단계를 통과했습니다. n=10에서 brain별 범위는 speak+support, explore, defend 어디에서도 겹치지 않으며, 같은-brain 쌍은 각 brain의 시그니처를 분배하지 않고 증폭시킵니다.",
+    "p4": "이 논문이 옹호하는 방법론은 그 순서입니다: 모든 headline은 분산과 함께 진술하라, 모든 행동 주장은 최소 한 개의 대칭적 반증을 통과시켜라, 단일 run 관찰은 결과가 아닌 가설로 다루어라, 그리고 walk-back을 살아남은 발견과 나란히 발표하라. 우리의 기여는 그 discipline을 저렴하게 실행할 수 있는 substrate입니다 — 유료 API 호출도, 특수 하드웨어도, 팀도 없이, 구독자 등급 CLI와 몇 시간이면 됩니다."
+  },
+
+  "reproduce": {
+    "title": "재현",
+    "subtitle": "Wilderness 이벤트 스트림은 seed당 비트 단위로 결정적입니다. LLM 응답은 seedable하지 않으므로, 재실행 결과는 보고된 표준편차 범위 안에 들어가며 정확한 일치는 아닙니다.",
+    "footnote": "LLM 접근은 로컬 CLI subprocess를 통해 이루어집니다 (Haiku는 Claude CLI, Flash는 Gemini CLI). Claude Max / Gemini Ultra 구독 한 개로 모든 호출이 커버됩니다 — 유료 HTTP API 호출은 발생하지 않습니다."
+  },
+
+  "resources": {
+    "title": "자료",
+
+    "paper_label": "논문 초안",
+    "paper_title": "전체 Markdown 초안",
+    "paper_desc": "방법론, n=10 × 3 pair 표가 들어간 findings, walk-back 감사, variance & limitations, 재현 가이드 — arXiv 패키징 직전의 작업본 그대로.",
+
+    "code_label": "코드와 데이터",
+    "code_title": "GitHub 저장소",
+    "code_desc": "두 개의 실험 스크립트, 실험에 쓰인 Ludex organ 라이브러리 subset, 두 Tier-A figure와 그 생성 스크립트, 그리고 figure가 재실험 없이 정확히 재현되도록 커밋된 JSON snapshot.",
+
+    "series_label": "시리즈 컨텍스트",
+    "series_title": "Model Medicine",
+    "series_desc": "이 논문은 Four Shell Model을 도입하고 네 개의 LLM Core를 고스트레스 조건에서 특성화한 Jeong (2026)의 후속작입니다. Walkable Genotypes는 그 Core 특성화가 중간-자극 환경으로 이전되는지를 묻습니다.",
+
+    "cite_title": "인용"
+  },
+
+  "about": {
+    "title": "소개",
+    "lead": "Walkable Genotypes는 Model Medicine 시리즈 안의 작은 동반 연구입니다. LLM Core에 대한 행동 주장이 얼마나 저렴하게 반증될 수 있는지를 — 그리고 어떤 주장이 그 과정을 통과했을 때, 그것을 finding이라 부르기 위해 무엇이 필요한지를 — 보여주기 위해 쓰였습니다.",
+    "author": "저자: Jihoon 'JJ' Jeong, MD, MPH, PhD. DGIST 전기전자컴퓨터공학과 · ModuLabs.",
+    "ack": "Model Medicine 워크플로 안에서 두 명의 AI 에이전트 협업자 (이론·작성 좌석과 실험·재현성 좌석)의 운영 지원을 받았습니다. 네 walk-back을 조용히 지우는 대신 contribution의 일부로 진술하자는 discipline은 그들이 주장해 준 부분입니다."
+  }
+}

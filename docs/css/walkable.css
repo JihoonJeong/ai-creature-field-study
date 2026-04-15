@@ -1,0 +1,153 @@
+/* ============================================
+   Walkable Genotypes — additions to the
+   Model Medicine series base style.
+   ============================================ */
+
+/* --- Figures --- */
+.figure {
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.5rem;
+  border: 1px solid var(--border-light);
+}
+
+.figure-caption {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 1rem auto 0;
+  text-align: left;
+}
+
+
+/* --- Code block --- */
+.codeblock {
+  background: #050509;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.codeblock pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #c8c8d8;
+}
+
+.codeblock code {
+  font-family: inherit;
+}
+
+
+/* --- Prose paragraphs (long-form sections) --- */
+.prose,
+.prose-lead {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  max-width: 720px;
+}
+
+.prose {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-lead {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.subsection-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.005em;
+}
+
+.footnote {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 1rem;
+  max-width: 720px;
+}
+
+
+/* --- Resources grid --- */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.resource-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.resource-label {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.6rem;
+}
+
+.resource-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.resource-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+
+/* --- Footer additions --- */
+.footer-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-text a {
+  color: var(--text-secondary);
+}
+
+.footer-text a:hover {
+  color: var(--accent);
+}

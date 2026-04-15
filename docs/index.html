@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walkable Genotypes — Cross-Environment Validation of the Four Shell Model in AI Creatures</title>
+  <meta name="description" content="A small, replication-disciplined field study of two LLM-backed AI creatures in a seed-deterministic environment. The surviving finding — brain-fixed behavioral attractors with within-pair amplification — independently reproduces a Core-property prediction from Jeong (2026) in a different environment.">
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Walkable Genotypes">
+  <meta property="og:description" content="Cross-environment validation of the Four Shell Model in AI Creatures. A field study with five hypotheses, four walk-backs, and one survivor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jihoonjeong.github.io/ai-creature-field-study/">
+  <meta property="og:image" content="https://jihoonjeong.github.io/ai-creature-field-study/assets/figure1.png">
+
+  <!-- Citation metadata -->
+  <meta name="citation_title" content="Walkable Genotypes: Cross-Environment Validation of the Four Shell Model in AI Creatures">
+  <meta name="citation_author" content="Jeong, Jihoon">
+  <meta name="citation_publication_date" content="2026">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Walkable Genotypes">
+  <meta name="twitter:description" content="Five hypotheses, four walk-backs, one survivor. A replication-disciplined field study of AI Creatures.">
+  <meta name="twitter:creator" content="@hiconcep">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/walkable.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Walkable Genotypes</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#findings" data-i18n="nav.findings">Findings</a></li>
+        <li><a href="#methodology" data-i18n="nav.methodology">Methodology</a></li>
+        <li><a href="#reproduce" data-i18n="nav.reproduce">Reproduce</a></li>
+        <li><a href="#resources" data-i18n="nav.resources">Resources</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <p class="hero-label" data-i18n="hero.label">Model Medicine Series · April 2026</p>
+      <h1 class="hero-title">Walkable Genotypes</h1>
+      <p class="hero-tagline" data-i18n-html="hero.tagline">Cross-Environment Validation of the Four Shell Model in&nbsp;AI&nbsp;Creatures</p>
+      <p class="hero-summary" data-i18n="hero.summary">
+        Five behavioral hypotheses entered. Four collapsed into their own sample-level standard deviation when re-run at n=5 with the same seeds. One survived three progressively stricter falsifiers at n=10 — and independently reproduced a Core-property prediction made under stress in a separate study, in a different environment. This is the methodology that distinguished the survivor.
+      </p>
+      <div class="hero-actions">
+        <a href="#findings" class="btn btn-primary" data-i18n="hero.btn_findings">See the findings</a>
+        <a href="https://github.com/JihoonJeong/ai-creature-field-study" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="hero.btn_github">View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Findings -->
+  <section class="section" id="findings">
+    <div class="container">
+      <h2 class="section-title" data-i18n="findings.title">What survived. What didn't.</h2>
+      <p class="section-subtitle" data-i18n="findings.subtitle">
+        Two figures carry the empirical and methodological halves of the contribution.
+      </p>
+
+      <!-- Figure 1 card -->
+      <div class="paper-card" style="margin-bottom: 2.5rem;">
+        <p class="paper-venue" data-i18n="findings.fig1_label">Figure 1 · Empirical anchor</p>
+        <h3 class="paper-title" data-i18n="findings.fig1_title">Brain-fixed behavioral attractors</h3>
+        <figure class="figure">
+          <img src="assets/figure1.png" alt="Scatter plot of speak+support rate vs explore rate across n=10 × 3 pair conditions, showing two non-overlapping clusters by brain.">
+        </figure>
+        <p class="figure-caption" data-i18n="findings.fig1_caption">
+          Each point is one creature in one run on the (speak+support, explore) action-space plane (70 points total: 7 creature-conditions × 10 seeds). Color encodes brain — Haiku teal, Flash orange. Marker shape encodes pair condition: Haiku+Flash (○), Haiku+Haiku (△), Flash+Flash (▽). Larger black-edged markers are per-cluster means. The two brain clusters do not overlap on either axis at n=10, regardless of pair condition. Same-brain pairs push each brain deeper into its own attractor — visible in the Haiku triangles (bottom-right) and Flash triangles (upper-left).
+        </p>
+      </div>
+
+      <!-- Figure 2 card -->
+      <div class="paper-card">
+        <p class="paper-venue" data-i18n="findings.fig2_label">Figure 2 · Methodological spine</p>
+        <h3 class="paper-title" data-i18n="findings.fig2_title">Walk-back audit</h3>
+        <figure class="figure">
+          <img src="assets/figure2.png" alt="Forest plot showing four walked-back claims with overlapping noise bars (gray) above two surviving claims with non-overlapping per-brain ranges (color).">
+        </figure>
+        <p class="figure-caption" data-i18n="findings.fig2_caption">
+          Top four rows (gray, ±1σ): four early behavioral headlines that collapsed when re-run. In each, the effect estimate sits inside its own sample-level standard deviation; the bars overlap or sit at the noise floor. A dashed separator marks the discipline boundary. Bottom two rows (color): the surviving brain-fixed-attractor claim. Per-creature mean ranges for Haiku (teal) and Flash (orange) on speak+support and on explore — neither metric overlaps between brains. Row #4 is from a separate study in the Model Medicine track; we include it because it failed for the same reason as the others (the original asymmetry collapsed at n=10).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="section section-alt" id="methodology">
+    <div class="container">
+      <h2 class="section-title" data-i18n="methodology.title">Replication discipline as the spine</h2>
+      <p class="section-subtitle" data-i18n="methodology.subtitle">
+        The point of this paper is not the surviving finding. The point is the rhythm that produced it.
+      </p>
+
+      <div class="prose">
+        <p data-i18n="methodology.p1">
+          Early in the study, five small behavioral observations made it into write-ups. Each was based on one to three runs and pointed at something interesting: experience seemed to make creatures cautious; social presence seemed to eliminate defensive behavior; emotion seemed to flip toward "loving" in duos; a separate Model Medicine track reported one brain as permissive and another as strict.
+        </p>
+        <p data-i18n="methodology.p2">
+          We re-ran each of them under the same seeds at n=5, with full per-creature mean ± standard deviation. Four of the five collapsed. In every collapsed case the effect estimate was within its own sample-level standard deviation — the original "finding" had been a within-noise shuffle read as a headline.
+        </p>
+        <p data-i18n="methodology.p3">
+          One claim — surfaced not as a hypothesis but in the re-analysis of why one of the four had half-failed — was that each Brain occupies a distinct behavioral attractor in duos: Haiku settles into a social/supportive cluster, Flash into an explore/vigilant one. That claim was put through three progressively stricter tests: n=5 in the original mixed pair, then a Haiku+Haiku same-brain pair as a falsifier against pair-dynamics explanations, then a symmetric Flash+Flash pair, then n=10 across all three. It survived each stage. At n=10 the per-brain ranges do not overlap on speak+support, explore, or defend; same-brain pairs amplify each brain's signature rather than redistributing it.
+        </p>
+        <p data-i18n="methodology.p4">
+          The methodology this paper defends is that sequence: state every headline with variance, demand at least one symmetric falsifier, treat single-run observations as hypotheses rather than results, and publish the walk-backs alongside the survivor. Our contribution is a substrate where that discipline is cheap enough to run — no paid API calls, no specialized hardware, no team, just a subscriber-tier CLI and a few hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reproduce -->
+  <section class="section" id="reproduce">
+    <div class="container">
+      <h2 class="section-title" data-i18n="reproduce.title">Reproduce</h2>
+      <p class="section-subtitle" data-i18n="reproduce.subtitle">
+        The Wilderness event stream is bit-exact deterministic per seed. LLM responses are not seedable, so re-runs land within the reported standard-deviation bands rather than matching exactly.
+      </p>
+
+      <div class="codeblock">
+<pre><code># Clone and set up
+git clone https://github.com/JihoonJeong/ai-creature-field-study.git
+cd ai-creature-field-study
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+# n=10 confirmation, Pair A (Haiku + Flash)
+python experiments/duo_experiment.py \
+  --brains claude_cli:haiku,gemini_cli:gemini-2.5-flash \
+  --ticks 10 \
+  --train-seeds 42,99,7,13,55,1,23,77,100,200 \
+  --test-seed 123 \
+  --output-dir experiments/smoke/my_rerun
+
+# Re-generate the figures (matplotlib + scipy)
+pip install -r requirements-figures.txt
+python figures/walkable_genotypes/figure1_attractor_separation.py
+python figures/walkable_genotypes/figure2_walkback_audit.py</code></pre>
+      </div>
+
+      <p class="footnote" data-i18n="reproduce.footnote">
+        LLM access is via local CLI subprocesses (Claude CLI for Haiku, Gemini CLI for Flash). A Claude Max / Gemini Ultra subscription covers all the calls — no paid HTTP API is invoked.
+      </p>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section section-alt" id="resources">
+    <div class="container">
+      <h2 class="section-title" data-i18n="resources.title">Resources</h2>
+
+      <div class="resources-grid">
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="resources.paper_label">Paper draft</p>
+          <h3 class="resource-title" data-i18n="resources.paper_title">Full Markdown draft</h3>
+          <p class="resource-desc" data-i18n="resources.paper_desc">
+            Methodology, findings with the n=10 × 3 pairs table, the walk-back audit, variance &amp; limitations, and the reproducibility appendix — in their working form prior to arXiv packaging.
+          </p>
+          <a href="https://github.com/JihoonJeong/ai-creature-field-study/blob/main/docs/paper-draft.md" class="btn btn-outline btn-small" target="_blank" rel="noopener">paper-draft.md →</a>
+        </div>
+
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="resources.code_label">Code &amp; data</p>
+          <h3 class="resource-title" data-i18n="resources.code_title">GitHub repository</h3>
+          <p class="resource-desc" data-i18n="resources.code_desc">
+            Two experiment scripts, a subset of the Ludex organ library used by the experiments, both Tier-A figures with their generation scripts, and a committed JSON snapshot so figures reproduce exactly without re-running.
+          </p>
+          <a href="https://github.com/JihoonJeong/ai-creature-field-study" class="btn btn-outline btn-small" target="_blank" rel="noopener">JihoonJeong/ai-creature-field-study →</a>
+        </div>
+
+        <div class="resource-card">
+          <p class="resource-label" data-i18n="resources.series_label">Series context</p>
+          <h3 class="resource-title" data-i18n="resources.series_title">Model Medicine</h3>
+          <p class="resource-desc" data-i18n="resources.series_desc">
+            This paper is a follow-up to Jeong (2026), which introduced the Four Shell Model and characterized four LLM Cores under high-stress conditions. Walkable Genotypes asks whether those Core characterizations transfer to a moderate-stimulus environment.
+          </p>
+          <a href="https://jihoonjeong.github.io/model-medicine/" class="btn btn-outline btn-small" target="_blank" rel="noopener">model-medicine →</a>
+        </div>
+      </div>
+
+      <h3 class="subsection-title" style="margin-top: 4rem;" data-i18n="resources.cite_title">Cite</h3>
+      <div class="codeblock">
+<pre><code>@misc{walkable_genotypes_2026,
+  author = {Jeong, Jihoon},
+  title  = {Walkable Genotypes: Cross-Environment Validation of the Four Shell Model in AI Creatures},
+  year   = {2026},
+  url    = {https://jihoonjeong.github.io/ai-creature-field-study/}
+}
+
+@article{jeong2026model_medicine,
+  author = {Jeong, Jihoon},
+  title  = {Model Medicine: A Clinical Framework for Understanding, Diagnosing, and Treating AI Models},
+  year   = {2026},
+  eprint = {2603.04722},
+  archivePrefix = {arXiv}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">About</h2>
+      <p class="prose-lead" data-i18n-html="about.lead">
+        Walkable Genotypes is a small companion study within the Model Medicine series. It was written to show how cheaply a behavioral claim about an LLM Core can be falsified — and, when one survives that process, what it takes to call it a finding.
+      </p>
+      <p class="prose" data-i18n="about.author">
+        Author: Jihoon 'JJ' Jeong, MD, MPH, PhD. Department of Electrical Engineering &amp; Computer Science, DGIST · ModuLabs.
+      </p>
+      <p class="prose" data-i18n="about.ack">
+        With operational support from two AI agent collaborators in the Model Medicine workflow (theory/writing and experiment/reproducibility seats). The discipline of stating the four walk-backs as part of the contribution — rather than quietly trimming them — is the part of the paper they argued for.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Jihoon Jeong · <a href="LICENSE" target="_blank">MIT License</a> · <a href="https://github.com/JihoonJeong/ai-creature-field-study" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
