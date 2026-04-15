@@ -3,6 +3,54 @@
    Model Medicine series base style.
    ============================================ */
 
+
+/* --- Hero with background image --- */
+.hero-with-image {
+  position: relative;
+}
+
+.hero-with-image .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-with-image .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  /* Push the image's brightness down so overlaid text reads. */
+  filter: brightness(0.55) saturate(1.05);
+}
+
+.hero-with-image .hero-bg::after {
+  /* Vertical fade: full image legible at top-mid, fading to body bg at bottom
+     so the hero blends into the next section without a hard seam. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 13, 0.45) 0%,
+    rgba(8, 8, 13, 0.55) 40%,
+    rgba(8, 8, 13, 0.85) 80%,
+    var(--bg-primary) 100%
+  );
+}
+
+.hero-with-image .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* The radial accent glow from the base hero competes with the image; mute it. */
+.hero-with-image::before {
+  display: none;
+}
+
+
 /* --- Figures --- */
 .figure {
   margin: 1.5rem 0 1rem;
