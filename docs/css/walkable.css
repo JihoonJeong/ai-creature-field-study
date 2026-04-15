@@ -67,8 +67,13 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+.section-image-small {
+  max-width: 50%;
+}
+
 @media (max-width: 720px) {
-  .section-image {
+  .section-image,
+  .section-image-small {
     max-width: 100%;
   }
 }
